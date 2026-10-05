@@ -7,28 +7,72 @@ import time
 import requests
 
 
-def _call(model, prompt, retries=3):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-    for attempt in range(retries):
-        r = requests.post(
-            url,
-            headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
-            json={
-                "contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"responseMimeType": "application/json", "temperature": 0.8},
-            },
-            timeout=180,
-        )
-        if r.status_code in (429, 500, 503):  # free-tier rate limit or busy server
-            wait = 20 * (attempt + 1)
-            print(f"  Gemini busy ({r.status_code}), retrying in {wait}s")
-            time.sleep(wait)
-            continue
-        r.raise_for_status()
-        text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-        text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
-        return json.loads(text)
-    raise RuntimeError("Gemini kept failing; try again later")
+# Google retires Gemini models often, so we try several current ones in order.
+DEFAULT_MODELS = [
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite",
+    "gemini-3-flash-preview",
+    "gemini-3.8-flash",
+]
+_working_model = None  # remembers the model that worked, so later calls skip failures
+
+
+def _model_list(cfg_model):
+    models = []
+    if os.getenv("GEMINI_MODEL"):
+        models.append(os.environ["GEMINI_MODEL"])
+    models += DEFAULT_MODELS
+    if _working_model:
+        models.insert(0, _working_model)
+    seen, out = set(), []
+    for m in models:
+        if m not in seen:
+            seen.add(m)
+            out.append(m)
+    return out
+
+
+def _extract_text(resp_json):
+    parts = resp_json["candidates"][0]["content"]["parts"]
+    return "".join(p.get("text", "") for p in parts if not p.get("thought"))
+
+
+def _call(cfg_model, prompt, retries=3):
+    global _working_model
+    last_error = "unknown"
+    for model in _model_list(cfg_model):
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        for attempt in range(retries):
+            r = requests.post(
+                url,
+                headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
+                json={
+                    "contents": [{"parts": [{"text": prompt}]}],
+                    "generationConfig": {"responseMimeType": "application/json"},
+                },
+                timeout=180,
+            )
+            if r.status_code in (404, 400, 403):  # model retired / not allowed: try the next one
+                last_error = f"{model}: HTTP {r.status_code} {r.text[:150]}"
+                print(f"  model {model} unavailable ({r.status_code}), trying the next one")
+                break
+            if r.status_code in (429, 500, 503):  # rate limit or busy server
+                last_error = f"{model}: HTTP {r.status_code} {r.text[:150]}"
+                if attempt < retries - 1:
+                    wait = 20 * (attempt + 1)
+                    print(f"  {model} busy ({r.status_code}), retrying in {wait}s")
+                    time.sleep(wait)
+                    continue
+                print(f"  {model} still busy, trying the next model")
+                break
+            r.raise_for_status()
+            text = _extract_text(r.json())
+            text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
+            _working_model = model
+            print(f"  (Gemini model used: {model})")
+            return json.loads(text)
+    raise RuntimeError(f"No Gemini model worked. Last problem: {last_error}")
 
 
 def write_film(cfg, candidates, used_topics):
