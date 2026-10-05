@@ -1,76 +1,49 @@
-# YouTube Auto Shorts Bot (free, runs on GitHub Actions)
+# Daily AI Short Film Bot (free, runs on GitHub Actions)
 
-Every day a GitHub Action writes a script (Gemini), records the voice (edge-tts),
-picks stock footage (Pexels), assembles a vertical video with captions (FFmpeg),
-and uploads it to YouTube as **private with a scheduled publish time**. YouTube
-then publishes it at exactly the time you set in `schedule.json`. Your laptop can be off.
+One short film a day, made in the cloud and scheduled by Buffer to **YouTube Shorts, TikTok and Facebook Reels**.
+Your laptop can be off.
 
-## Setup (do these in order)
-
-### 1. Put the project on GitHub
-Create a **public** repository (public repos get unlimited free Action minutes;
-your keys stay private in Secrets) and push this folder to it.
-
-### 2. Get free API keys
-- **Gemini:** https://aistudio.google.com/apikey -> `GEMINI_API_KEY`
-- **Pexels:** https://www.pexels.com/api/ -> `PEXELS_API_KEY`
-
-### 3. Create YouTube API credentials
-1. Go to https://console.cloud.google.com and create a project.
-2. **APIs & Services -> Library**: enable **YouTube Data API v3**.
-3. **OAuth consent screen**: choose External, fill the basics, add your own Google
-   account under Test users.
-4. **Publish the app** (set status to **In production**). If you leave it in
-   "Testing", the token expires every 7 days and the bot silently stops.
-   An "unverified app" warning is normal for personal use.
-5. **Credentials -> Create credentials -> OAuth client ID -> Desktop app**.
-   Download the JSON and save it as `client_secret.json` in the project root.
-
-### 4. Get your refresh token (once, on your laptop)
 ```
-pip install -r requirements.txt
-python src/get_refresh_token.py
+Google Trends UK + BBC RSS -> Gemini (script + fact-check + Chinese) -> Kokoro British voice
+-> Pollinations Flux images -> FFmpeg (zoom, subtitles, music) -> GitHub Release (public link)
+-> Buffer API (scheduled at your chosen time)
 ```
-A browser opens. Sign in with the Google account that owns the channel and allow
-access (click Advanced -> Continue past the unverified warning). The script prints
-three values.
 
-### 5. Add GitHub Secrets
+## Setup (in order)
+
+### 1. Buffer
+1. Make a free account at buffer.com and connect your **YouTube**, **TikTok** and **Facebook Page** (free plan = 3 channels).
+2. Open https://publish.buffer.com/settings/api and create an **API key**. Copy it.
+
+### 2. Gemini key
+https://aistudio.google.com/apikey -> Create API key.
+
+### 3. Optional: Pollinations key (makes images faster)
+Sign up at https://enter.pollinations.ai and create a key. Without it the bot still works but waits ~16 s between images.
+
+### 4. GitHub Secrets
 Repo -> Settings -> Secrets and variables -> Actions -> New repository secret:
 
 | Name | Value |
 |---|---|
 | `GEMINI_API_KEY` | from step 2 |
-| `PEXELS_API_KEY` | from step 2 |
-| `YT_CLIENT_ID` | printed in step 4 |
-| `YT_CLIENT_SECRET` | printed in step 4 |
-| `YT_REFRESH_TOKEN` | printed in step 4 |
+| `BUFFER_API_KEY` | from step 1 |
+| `POLLINATIONS_API_KEY` | from step 3 (optional) |
 
-### 6. Set your schedule
-Edit `schedule.json`. `publish_at` is an ISO time with your UTC offset
-(for example `2026-10-07T19:00:00+05:00`) and must be in the future. Leave `topic`
-empty to let Gemini choose. Change `style` to match your channel.
+### 5. Choose your post time
+Edit `config.json`: `"post_time_utc": "13:00"` is the daily time in **UTC**. The bot builds each film hours early (04:00 UTC) and Buffer posts it at your time.
+`channels` says which version each platform gets: `"en"` (English subtitles) or `"zh"` (Chinese subtitles).
 
-### 7. Test
-- **Dry run on your laptop** (needs ffmpeg installed; builds the video, no upload):
-  set `GEMINI_API_KEY` and `PEXELS_API_KEY`, then `DRY_RUN=1 python src/short.py`
-  and check `work/final.mp4`.
-- **On GitHub:** Actions tab -> **Short** -> Run workflow.
+### 6. Test without posting
+Actions tab -> **Daily Short Film** -> Run workflow (leave **dry_run ticked**). When it finishes, open the run and download the **test-film** file at the bottom. Nothing is posted.
 
-## Important: the YouTube API audit
-Videos uploaded by an **unverified** API project are forced to stay private, so your
-scheduled publish will not make them public. Submit Google's free
-"YouTube API Services - Audit and Quota Extension" form to lift this. Until it is
-approved you can publish the private videos manually in YouTube Studio.
+### 7. Go live
+Run the workflow again with **dry_run unticked**. From then on it runs every day by itself.
 
-## Notes
-- Each run builds and schedules the **next unfinished slot** in `schedule.json`, so
-  the bot works ahead of the publish time.
-- If scheduled runs ever stop, re-enable the workflow in the Actions tab.
-- Change the voice with the `TTS_VOICE` env var, for example `en-GB-RyanNeural`.
-- Free-tier limits and model names change over time. If Gemini returns a 404, set
-  `GEMINI_MODEL` to a model listed at https://ai.google.dev/gemini-api/docs/models.
-
-## Next phase
-Long films (up to 1 hour) get their own `film.yml` workflow, built on the same pieces
-with a chapter-by-chapter script loop.
+## Good to know
+- **Use a public repository.** Videos are hosted as GitHub Release files, and Buffer needs a public link. Your keys stay private in Secrets.
+- **Buffer free plan:** 10 queued posts per channel and 3,000 API requests per 30 days. One film a day fits.
+- **Music:** Kevin MacLeod (CC BY 4.0). The bot adds the required credit line to the post text. Your own MP3s placed in a `music/` folder are used instead.
+- **AI disclosure:** posts are flagged as AI-generated on YouTube and TikTok.
+- **Fact-check:** Gemini double-checks the script, but it is not perfect. Review early posts, and avoid news topics you would not want to be wrong about.
+- **Free tiers change.** If a step fails, the log in the Actions tab says which one.

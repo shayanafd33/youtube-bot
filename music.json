@@ -1,0 +1,8 @@
+{
+  "credit_template": "Music: \"{title}\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
+  "tracks": [
+    {"title": "Fluidscape", "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fluidscape.mp3"},
+    {"title": "Long Note Four", "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Long%20Note%20Four.mp3"},
+    {"title": "Dark Fog", "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dark%20Fog.mp3"}
+  ]
+}
