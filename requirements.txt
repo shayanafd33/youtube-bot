@@ -1,7 +1,5 @@
-anthropic
-requests
-feedparser
-numpy
-soundfile
+requests>=2.31.0
+feedparser>=6.0.11
+numpy>=1.26
+soundfile>=0.12.1
 kokoro>=0.9.4
-fal-client

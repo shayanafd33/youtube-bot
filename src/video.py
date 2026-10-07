@@ -65,10 +65,10 @@ def _chunks(text, lang):
     return [" ".join(words[i:i + 3]) for i in range(0, len(words), 3)]
 
 
-def build_ass(lines, speech_seconds, scene_seconds, lang, path):
+def _ass_header(lang):
     font = FONTS[lang]
     size = 74 if lang == "en" else 70
-    header = (
+    return (
         "[Script Info]\nScriptType: v4.00+\n"
         f"PlayResX: {W}\nPlayResY: {H}\nWrapStyle: 2\n\n"
         "[V4+ Styles]\n"
@@ -79,39 +79,57 @@ def build_ass(lines, speech_seconds, scene_seconds, lang, path):
         "-1,0,0,0,100,100,0,0,1,6,2,2,90,90,430,1\n\n"
         "[Events]\nFormat: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text\n"
     )
-    events, cursor = [], 0.0
-    for text, speech, scene in zip(lines, speech_seconds, scene_seconds):
+
+
+def build_ass_events(events, lang, path):
+    """events: [(start_seconds, duration_seconds, text)] -> ASS subtitle file."""
+    out = []
+    for start, dur, text in events:
         chunks = _chunks(text, lang) or [text]
         total = sum(len(c) for c in chunks) or 1
-        t = cursor
+        t = start
         for c in chunks:
-            d = speech * len(c) / total
+            d = dur * len(c) / total
             shown = c.upper() if lang == "en" else c
-            events.append(f"Dialogue: 0,{_ass_time(t)},{_ass_time(t + d)},Default,,0,0,0,,{shown}")
+            out.append(f"Dialogue: 0,{_ass_time(t)},{_ass_time(t + d)},Default,,0,0,0,,{shown}")
             t += d
+    path.write_text(_ass_header(lang) + "\n".join(out) + "\n", encoding="utf-8")
+
+
+def build_ass(lines, speech_seconds, scene_seconds, lang, path):
+    events, cursor = [], 0.0
+    for text, speech, scene in zip(lines, speech_seconds, scene_seconds):
+        events.append((cursor, speech, text))
         cursor += scene
-    path.write_text(header + "\n".join(events) + "\n", encoding="utf-8")
+    build_ass_events(events, lang, path)
 
 
 # ---------- music ----------
-def pick_music(workdir):
-    """Download one Kevin MacLeod track. Returns (path, credit) or (None, '')."""
+def pick_music(workdir, key="tracks"):
+    """Download one Kevin MacLeod track (tries several). Returns (path, credit) or (None, '')."""
     try:
         cfg = json.loads((ROOT / "music.json").read_text(encoding="utf-8"))
-        local = sorted((ROOT / "music").glob("*.mp3")) if (ROOT / "music").exists() else []
-        if local:  # your own tracks in the music/ folder take priority (add credit yourself if needed)
-            return local[random.randrange(len(local))], ""
-        track = random.choice(cfg["tracks"])
-        r = requests.get(track["url"], timeout=120)
-        r.raise_for_status()
-        if len(r.content) < 50000:
-            raise ValueError("music file too small")
-        dest = workdir / "music.mp3"
-        dest.write_bytes(r.content)
-        return dest, cfg["credit_template"].format(title=track["title"])
     except Exception as e:
         print(f"  no music this time ({e})")
         return None, ""
+    local = sorted((ROOT / "music").glob("*.mp3")) if (ROOT / "music").exists() else []
+    if local:  # your own tracks in the music/ folder take priority (add credit yourself if needed)
+        return local[random.randrange(len(local))], ""
+    tracks = list(cfg.get(key) or cfg["tracks"])
+    random.shuffle(tracks)
+    for track in tracks:
+        try:
+            r = requests.get(track["url"], timeout=120)
+            r.raise_for_status()
+            if len(r.content) < 50000:
+                raise ValueError("file too small")
+            dest = workdir / "music.mp3"
+            dest.write_bytes(r.content)
+            return dest, cfg["credit_template"].format(title=track["title"])
+        except Exception as e:
+            print(f"  music '{track['title']}' failed ({e}), trying another")
+    print("  no music this time")
+    return None, ""
 
 
 # ---------- final mix ----------

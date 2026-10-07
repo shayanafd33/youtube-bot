@@ -10,7 +10,7 @@ STATE_FILE = ROOT / "state" / "state.json"
 
 def load_config():
     cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
-    cfg["gemini_model"] = os.getenv("GEMINI_MODEL", cfg.get("gemini_model", "gemini-2.5-flash"))
+    cfg["gemini_model"] = os.getenv("GEMINI_MODEL", cfg.get("gemini_model", "gemini-3.5-flash"))
     return cfg
 
 

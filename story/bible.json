@@ -1,0 +1,1161 @@
+{
+ "title": "THE FORGETTING",
+ "logline": "When an experimental memory-erasing therapy escapes a Derbyshire research clinic and turns people into hollow, hunting strangers, a guilt-ridden ex-army medic and an overworked A&E doctor cross the Peak District to reach the clinic's archives, only to find the man behind the outbreak believes he is curing the world, and that their lost friend is still alive somewhere inside the first monster.",
+ "genre": "Survival horror thriller / human drama (PG-13, no gore)",
+ "runtime_plan": "40 episodes of about 70-80 seconds, one per day, forming a roughly 50-minute film",
+ "hashtags": [
+  "TheForgetting",
+  "zombiefilm",
+  "aifilm",
+  "survivalhorror",
+  "shortfilm",
+  "horrorstory"
+ ],
+ "style": {
+  "image_prefix": "Photorealistic live-action feature film still, shot on ARRI Alexa with anamorphic lens, 35mm film grain, natural skin texture, cold desaturated palette of slate blue, moss green and peat brown, cinematic realism.",
+  "image_suffix": "Realistic human proportions, real actors, no text, no watermark, no gore, no blood, no cartoon look.",
+  "visual": "Grounded British realism: Peak District moors, stone villages, NHS corridors, rain-soaked tarmac, fog. Real fabrics, mud, breath in cold air. Nothing glossy or fantasy.",
+  "camera": "Handheld but controlled; long lenses (85mm) for intimate faces, wide anamorphic 35mm for landscapes, slow push-ins during dread, static frames during grief. Never shaky for its own sake.",
+  "lighting": "Overcast natural light, practical sources (torches, hospital fluorescents, stove glow), low-key shadows at night, cold blue ambient with warm skin highlights.",
+  "sound": "Sparse. Wind, rain, breath, distant radio. Infected are heard before seen. Silence is used for grief.",
+  "music": "Low strings and sustained drones, a single recurring four-note hum (the tune Toby hums) that returns in the finale as a lullaby.",
+  "acts": {
+   "1": {
+    "camera": "Handheld medium shots, slow creeping push-ins, 50-85mm lenses",
+    "lighting": "Cold fog light, hospital fluorescent, wet dusk",
+    "sound": "Wind, alarms, distant humming",
+    "music": "Sparse drone, cello"
+   },
+   "2": {
+    "camera": "Wider anamorphic landscapes, intimate close-ups for quiet scenes, steady tracking",
+    "lighting": "Pale overcast, stove glow, dark tunnel torch light",
+    "sound": "Rain, footsteps, radio static, breathing",
+    "music": "Low strings with a hopeful piano motif"
+   },
+   "3": {
+    "camera": "Tighter, more claustrophobic framing, shallow depth of field, dutch angles only at betrayal moments",
+    "lighting": "Harsh floodlights, sodium orange, storm blue, power-cut darkness",
+    "sound": "Generators, sirens, muffled screams behind doors",
+    "music": "Pulsing bass, dissonant strings"
+   },
+   "4": {
+    "camera": "Fast cutting for action, slow held shots for sacrifice and tenderness",
+    "lighting": "Dawn gold breaking through grey, tunnel dark, industrial teal",
+    "sound": "Water, machinery, a voice over radio",
+    "music": "Rising strings, the hum returning"
+   },
+   "5": {
+    "camera": "Long calm static frames and slow pull-outs",
+    "lighting": "Clear cold sun, soft golden dusk",
+    "sound": "Wind and birdsong returning",
+    "music": "Quiet piano and the hum as a lullaby"
+   }
+  }
+ },
+ "dialogue_rules": "Natural British speech. People interrupt, trail off, and stay silent. No speeches. Nobody explains what they already know. Each character keeps their own speaking style. Violence is cut away from, never shown. Maximum two lines per shot.",
+ "world": {
+  "location": "Peak District, Derbyshire, and Sheffield, England (fictional Aldersgate Hall near Edale Moor, fictional Haven camp at the disused Ashop water treatment works)",
+  "year_season": "November 2027, late autumn, cold, wet, foggy",
+  "cause": "Lethe-7, an experimental gene-therapy vector built by Aldersgate Clinical Research to erase traumatic memory in veterans with PTSD. A trial participant relapsed into an infectious form and wandered off the site.",
+  "spread": "Bodily fluids (bites, blood, saliva) and, in close confined spaces, aerosol. Spreads across the Hope Valley hospital in hours and across South Yorkshire in days.",
+  "government_response": "Day 1 Emergency Alert: stay indoors. Day 2 Operation Hearth: South Yorkshire cordoned by the army. If containment fails, the plan is a controlled firebomb burn of the valley.",
+  "military": "Major Helen Hargreaves commands the Edale cordon with orders she increasingly doubts.",
+  "medical": "NHS hospitals overwhelmed within a day. Haven, run by Aldersgate under a Ministry contract, offers shelter and 'screening'.",
+  "communication": "Mobile networks fail by Day 3. BBC Radio Sheffield broadcasts until its studio is overrun on Day 2. Ham radio and army loudspeakers remain.",
+  "infrastructure": "Grid unstable from Day 4. Gravity-fed reservoirs still supply water. Roads blocked with abandoned cars. Fuel scarce.",
+  "safe_zones": "Haven (a false sanctuary and a trial site).",
+  "danger_zones": "Hope Valley Hospital, Begum Motors garage, Edale valley floor, the Quiet Wing at Haven, Sheffield beyond the cordon."
+ },
+ "infection": {
+  "transmission": "Bites, blood or saliva into wounds or mucous membranes; aerosol only in sealed rooms.",
+  "incubation": "Between 20 minutes and 6 hours depending on dose.",
+  "stages": "Stage 1 Dissociation: fever, confusion, memory loss (curable by the serum). Stage 2 Fevered: 6 to 12 hours, rage, speed, high temperature (still curable). Stage 3 Hollow: after about 48 hours, temperature falls, the person goes slow, pale, silent and drawn to sound and warmth (not curable).",
+  "memory": "Infected lose their identity and memory. Only the Alpha, Toby, keeps fragments.",
+  "communication": "No speech. Hollows hum when gathered; Toby's hum draws them.",
+  "immunity": "About 1 in 4,000 people carry natural antibodies. Jamie is one.",
+  "detection": "Fever above 38.5C and pupils that barely react to a penlight, followed by memory loss.",
+  "slowing": "Cold slows the infected and overheats Brutes. Sedatives slow Stage 1 and 2 only.",
+  "after_death": "Infected do not rise again after death. Death ends the infection. The infected are living people."
+ },
+ "infected": {
+  "HOLLOW": {
+   "name": "Hollows (standard infected)",
+   "look": "an infected person in everyday torn clothes, pale grey skin, glassy unfocused eyes, slack expressionless face, standing or walking slowly, no gore",
+   "behaviour": "Slow, silent, drawn to sound, warmth and humming. Low intelligence. Weakness: cold slows them, they lose interest in silence.",
+   "seed": 7001
+  },
+  "FEVERED": {
+   "name": "Fevered (fast infected)",
+   "look": "a feverish infected person, flushed sweating face, wide dilated pupils, hunched sprinting posture, torn clothes, wild expression, no gore",
+   "behaviour": "Fast, hunts by sight and sound for hours. Weakness: burns out and collapses after prolonged exertion; sedatives and cold.",
+   "seed": 7002
+  },
+  "BRUTE": {
+   "name": "Brutes (mutated infected)",
+   "look": "a hulking infected man with swollen neck and shoulders, flushed steaming skin, vacant eyes, torn rugby shirt, no gore",
+   "behaviour": "Rare overreaction in strong, high-adrenaline people. Enormous strength, no pain. Weakness: overheats within minutes; freezing water stops it.",
+   "seed": 7003
+  }
+ },
+ "characters": {
+  "NARRATOR": {
+   "name": "Narrator",
+   "role": "Occasional title-card voice",
+   "voice": "bm_fable",
+   "speed": 0.98,
+   "look": "",
+   "seed": 1
+  },
+  "MARCUS": {
+   "name": "Marcus Hale",
+   "role": "Hero",
+   "age": 36,
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "seed": 1101,
+   "look": "Marcus, a 36-year-old British-Jamaican man, 6ft1 broad athletic build, deep brown skin, short black fade haircut, trimmed short beard with a few grey hairs, dark brown eyes, small scar through left eyebrow, wearing an olive-green mountain rescue shell jacket with a small red cross patch, charcoal fleece, dark cargo trousers, brown leather hiking boots",
+   "personality": "Steady, dry humour, protective, carries guilt. Fears leaving someone behind.",
+   "speaking_style": "Short sentences, understatement, quiet dark humour, says 'Right.' when deciding.",
+   "background": "Ex-army combat medic, now mountain rescue volunteer. Left his friend Toby wounded under fire years ago.",
+   "relationships": "Toby (brother in arms), Naomi (sister), Priya (uneasy partner).",
+   "arc": "From solo guilt-carrier to someone who lets others share the weight and can say goodbye.",
+   "carries": "red-handled ice axe (lost in scene 17), black wristwatch, Toby's dog tags once recovered"
+  },
+  "MARCUS_PAST": {
+   "name": "Marcus Hale (flashback)",
+   "role": "Flashback only",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "seed": 1101,
+   "look": "Marcus, a 31-year-old British-Jamaican man, 6ft1 athletic build, deep brown skin, clean-shaven, short black hair, dark brown eyes, small scar through left eyebrow, wearing desert-pattern army medic fatigues with a red cross armband"
+  },
+  "PRIYA": {
+   "name": "Dr Priya Nair",
+   "role": "Female lead",
+   "age": 33,
+   "voice": "bf_emma",
+   "speed": 1.0,
+   "seed": 1102,
+   "look": "Priya, a 33-year-old British-Indian woman, 5ft5 slim build, warm medium-brown skin, long black hair in a low ponytail, dark brown eyes behind round tortoiseshell glasses, faint tired shadows under her eyes, wearing a navy NHS scrub top under a beige waxed field jacket, black jeans, white trainers, NHS lanyard",
+   "personality": "Brilliant, exhausted, precise, hides guilt, fierce when it counts.",
+   "speaking_style": "Clinical and exact; trails off with 'Sorry, I just--' when lying.",
+   "background": "A&E registrar. Two years ago did a locum as clinical reviewer for Aldersgate and signed a safety summary that omitted a cluster of seizures under pressure.",
+   "relationships": "Marcus (partner and accuser), Jamie (protects her), Rourke (her former employer), Linnea (distrust).",
+   "arc": "From concealment to confession to authoring the cure and accepting accountability.",
+   "carries": "penlight in chest pocket, leather satchel"
+  },
+  "ROURKE": {
+   "name": "Dr Edmund Rourke",
+   "role": "Villain",
+   "age": 58,
+   "voice": "bm_george",
+   "speed": 0.96,
+   "seed": 1103,
+   "look": "Dr Edmund Rourke, a 58-year-old white British man, 5ft10 lean build, silver swept-back hair, pale grey eyes, thin clean-shaven face, rimless glasses, wearing a charcoal wool overcoat over a grey suit and white open-collar shirt, polished black brogues",
+   "personality": "Courteous, patient, never raises his voice, believes he is merciful.",
+   "speaking_style": "Complete sentences, gentle, uses the word 'mercy'.",
+   "background": "Chief Medical Officer of Aldersgate. His soldier son died by suicide after PTSD. Created Lethe to end that suffering.",
+   "goal": "Dose Sheffield's water with Lethe-8, the 'Mercy', making every infected person peaceful and erasing the trauma of all who drink it.",
+   "weakness": "Grief and pride; cannot bear to be called a murderer; hides a tremor in his right hand.",
+   "arc": "From benevolent host to exposed, then ironically given the peace he wanted: wiped of his grief and his son.",
+   "carries": "silver fountain pen, photo of his son in his coat pocket"
+  },
+  "TOBY": {
+   "name": "Sgt Toby Wren (the Sentinel)",
+   "role": "Alpha infected",
+   "age": 38,
+   "voice": "bm_daniel",
+   "speed": 0.82,
+   "seed": 1104,
+   "look": "Toby, a gaunt 38-year-old white British man, 6ft tall, shaved head with a thin surgical scar, hazel eyes with a pale grey ring around the iris, very pale skin, wearing a pale hospital gown under a khaki army greatcoat, bare feet, white hospital wristband, dog tags on a chain, blank calm expression",
+   "personality": "Gone, except fragments: a tune, Marcus's name.",
+   "speaking_style": "Single broken words, hums a four-note tune.",
+   "background": "Marcus's closest friend, army sergeant. Left PTSD veterans' care and vanished eight months ago into the Aldersgate trial.",
+   "role_in_story": "Alpha: his hum draws Hollows. Retains fragments of memory. Rourke's first success.",
+   "weakness": "Responds to Marcus's voice and the unit call-sign.",
+   "arc": "From mystery to tragic mercy: shuts the valve and dies as himself.",
+   "carries": "dog tags reading WREN T, wristband ALDERSGATE-0417"
+  },
+  "TOBY_PAST": {
+   "name": "Toby Wren (flashback)",
+   "role": "Flashback only",
+   "voice": "bm_daniel",
+   "speed": 1.0,
+   "seed": 1104,
+   "look": "Toby, a healthy 33-year-old white British man, 6ft tall fit build, short brown hair, hazel eyes, warm lopsided smile, light stubble, wearing desert-pattern army fatigues, dog tags"
+  },
+  "GAZ": {
+   "name": "Gareth 'Gaz' Doyle",
+   "role": "Security / ex-police",
+   "age": 52,
+   "voice": "bm_daniel",
+   "speed": 1.0,
+   "seed": 1105,
+   "look": "Gaz, a 52-year-old white British man, 5ft11 stocky heavy build, grey buzzcut, blue eyes, ruddy weathered skin, thick grey moustache, wearing a black hospital security polo shirt, black stab vest, black trousers, black boots, radio clipped to shoulder",
+   "personality": "Blunt, loyal, grumpy, secretly afraid of freezing again.",
+   "speaking_style": "Northern, blunt, calls people 'love' and 'pal'.",
+   "background": "Former police firearms officer, now hospital security. Froze once during a knife attack and never forgave himself.",
+   "arc": "Fear to sacrifice: holds the door in scene 28.",
+   "carries": "heavy black Maglite torch, bunch of keys"
+  },
+  "FATIMA": {
+   "name": "Fatima 'Fats' Begum",
+   "role": "Engineer / mechanic",
+   "age": 29,
+   "voice": "bf_isabella",
+   "speed": 1.05,
+   "seed": 1106,
+   "look": "Fatima, a 29-year-old British-Bangladeshi woman, 5ft6 sturdy build, warm light-brown skin, dark brown eyes, dark teal hijab, oil-stained navy mechanic overalls tied at the waist over a grey long-sleeved t-shirt, steel-toe boots, grease on her hands",
+   "personality": "Sarcastic, fast, brave, hides guilt for abandoning her brother Imran.",
+   "speaking_style": "Quick, sarcastic, mechanic jargon.",
+   "arc": "Guilt to refusing to leave anyone behind again; Imran is cured.",
+   "carries": "silver adjustable wrench"
+  },
+  "LINNEA": {
+   "name": "Dr Linnea Frost",
+   "role": "Scientist / hidden informant",
+   "age": 41,
+   "voice": "bf_alice",
+   "speed": 0.97,
+   "seed": 1107,
+   "look": "Linnea, a 41-year-old Swedish-born woman, 5ft8 tall slim, pale skin, platinum-blonde chin-length bob, pale blue eyes, composed expression, wearing a black wool coat, cream roll-neck jumper, black trousers, black ankle boots, silver wristwatch",
+   "personality": "Calm, controlled, precise, convinced the end justifies the means.",
+   "speaking_style": "Formal, no contractions, soft Swedish cadence.",
+   "background": "Former Aldersgate research director. Reports on the group to Rourke by satellite phone.",
+   "arc": "Betrayer to redeemed: turns on Rourke, supplies the data, faces trial.",
+   "carries": "orange hard-shell sample case, hidden satellite phone (confiscated in scene 26)"
+  },
+  "JAMIE": {
+   "name": "Jamie Cooper",
+   "role": "Teenage survivor, naturally immune",
+   "age": 16,
+   "voice": "bf_lily",
+   "speed": 1.08,
+   "seed": 1108,
+   "look": "Jamie, a 16-year-old white British girl, 5ft4 wiry build, pale freckled skin, green eyes, auburn hair in a messy side braid, gap between her front teeth, small silver nose stud, wearing a bottle-green Explorer Scouts hoodie, navy puffer vest, black leggings, battered grey trainers, red wristband, compass on a cord",
+   "personality": "Funny, scared, observant, braver than she knows.",
+   "speaking_style": "Teenage banter, nervous jokes, goes quiet when serious.",
+   "arc": "Jokes to hide fear, then chooses to donate and own her role.",
+   "carries": "compass on a cord, small hand-held two-way radio"
+  },
+  "PEGGY": {
+   "name": "Margaret 'Peggy' Alder",
+   "role": "Older survivor",
+   "age": 71,
+   "voice": "bf_lily",
+   "speed": 0.88,
+   "seed": 1109,
+   "look": "Peggy, a 71-year-old white British woman, 5ft3 small frame, short silver curly hair, blue eyes, lined kind face, pearl earrings, wearing a mustard-yellow cardigan, long tweed skirt, thick tights, brown lace-up shoes, beige raincoat, white plaster cast on her left wrist",
+   "personality": "Calm, firm, a retired headteacher; sees everything.",
+   "speaking_style": "'Now then.' Gentle authority, complete sentences.",
+   "background": "Her late husband worked on the Ashop water tunnels; she knows them.",
+   "arc": "Quiet anchor who leads the group through the tunnels twice.",
+   "carries": "handbag with a flask, cast on left wrist"
+  },
+  "OLLIE": {
+   "name": "Oliver 'Ollie' Finch",
+   "role": "Radio operator, the one who seems weak",
+   "age": 24,
+   "voice": "bm_fable",
+   "speed": 1.03,
+   "seed": 1110,
+   "look": "Ollie, a 24-year-old white British man, 5ft9 thin build, pale skin, messy brown hair, brown eyes behind black rectangular glasses, dark circles, wearing a grey hoodie, black jeans, bright orange running shoes, a black headset around his neck",
+   "personality": "Anxious, stammers, hobbyist radio ham, secretly brave.",
+   "speaking_style": "Stammers under stress, radio jargon, 'copy that'.",
+   "arc": "Panic to the voice that cancels Operation Hearth.",
+   "carries": "handheld ham radio, headset"
+  },
+  "NAOMI": {
+   "name": "Naomi Hale",
+   "role": "Marcus's sister",
+   "age": 33,
+   "voice": "bf_isabella",
+   "speed": 0.98,
+   "seed": 1111,
+   "look": "Naomi, a 33-year-old British-Jamaican woman, 5ft7 slim, deep brown skin, shoulder-length natural curls, brown eyes, warm tired smile, wearing a burgundy knit jumper, blue jeans, brown ankle boots, numbered Haven wristband",
+   "personality": "Warm, practical, a primary-school teacher who protects children.",
+   "speaking_style": "Calls him 'Marcus Alexander Hale' when cross.",
+   "arc": "Stays to protect thirty children and becomes Haven's conscience."
+  },
+  "HARGREAVES": {
+   "name": "Major Helen Hargreaves",
+   "role": "Military commander",
+   "age": 45,
+   "voice": "bf_isabella",
+   "speed": 0.92,
+   "seed": 1112,
+   "look": "Major Helen Hargreaves, a 45-year-old white British woman, 5ft8 fit build, grey-blonde hair in a tight bun, steel-blue eyes, stern face, wearing British Army multicam combat uniform with a major's rank slide, black beret, radio headset",
+   "personality": "Clipped, dutiful, privately doubting orders.",
+   "speaking_style": "Short military phrasing.",
+   "arc": "Follows orders to cancelling Hearth when shown the truth."
+  },
+  "RHEA": {
+   "name": "Rhea Calloway",
+   "role": "BBC Radio Sheffield reporter (dies on air, scene 8)",
+   "age": 38,
+   "voice": "bf_alice",
+   "speed": 1.05,
+   "seed": 1113,
+   "look": "Rhea, a 38-year-old Black British woman, 5ft6, short natural hair, brown eyes, wearing a green blouse and large studio headphones, seated at a radio microphone"
+  },
+  "IMRAN": {
+   "name": "Imran Begum",
+   "role": "Fatima's younger brother, curable",
+   "age": 26,
+   "voice": "bm_lewis",
+   "speed": 1.1,
+   "seed": 1114,
+   "look": "Imran, a 26-year-old British-Bangladeshi man, 5ft10 lean build, light-brown skin, short black hair, brown eyes, wearing a grey garage polo shirt with oil stains"
+  }
+ },
+ "initial_continuity": {
+  "MARCUS": {
+   "status": "alive",
+   "visible": "",
+   "carries": "red-handled ice axe",
+   "knows": "Toby disappeared eight months ago"
+  },
+  "PRIYA": {
+   "status": "alive",
+   "visible": "",
+   "carries": "penlight",
+   "knows": "she signed the Aldersgate safety summary two years ago (secret)"
+  },
+  "ROURKE": {
+   "status": "alive",
+   "visible": "",
+   "carries": "silver fountain pen",
+   "knows": "everything about Lethe-7"
+  },
+  "TOBY": {
+   "status": "alive (infected Alpha)",
+   "visible": "",
+   "carries": "dog tags",
+   "knows": ""
+  },
+  "GAZ": {
+   "status": "alive",
+   "visible": "",
+   "carries": "heavy Maglite torch",
+   "knows": ""
+  },
+  "FATIMA": {
+   "status": "alive",
+   "visible": "",
+   "carries": "adjustable wrench",
+   "knows": "her brother Imran is missing"
+  },
+  "LINNEA": {
+   "status": "alive",
+   "visible": "",
+   "carries": "orange sample case, hidden satellite phone",
+   "knows": "she informs for Rourke (secret)"
+  },
+  "JAMIE": {
+   "status": "alive",
+   "visible": "",
+   "carries": "compass, two-way radio",
+   "knows": ""
+  },
+  "PEGGY": {
+   "status": "alive",
+   "visible": "",
+   "carries": "handbag with flask",
+   "knows": "the Ashop water tunnels"
+  },
+  "OLLIE": {
+   "status": "alive",
+   "visible": "",
+   "carries": "ham radio, headset",
+   "knows": ""
+  },
+  "NAOMI": {
+   "status": "alive",
+   "visible": "",
+   "carries": "",
+   "knows": ""
+  },
+  "HARGREAVES": {
+   "status": "alive",
+   "visible": "",
+   "carries": "",
+   "knows": ""
+  },
+  "RHEA": {
+   "status": "alive",
+   "visible": "",
+   "carries": "",
+   "knows": ""
+  },
+  "IMRAN": {
+   "status": "alive",
+   "visible": "",
+   "carries": "",
+   "knows": ""
+  }
+ },
+ "twists": [
+  {
+   "twist": "The man on the moor is Marcus's lost friend Toby, and he is the Alpha.",
+   "clues": "Dog tags WREN T in scene 1; the hum in scenes 1, 7, 8, 15; wristband ALDERSGATE-0417.",
+   "payoff": "Scenes 23 and 35"
+  },
+  {
+   "twist": "Priya signed the Aldersgate safety summary.",
+   "clues": "She flinches at 'Aldersgate' in scenes 2 and 10; lies by omission in 6 and 15.",
+   "payoff": "Scenes 18, 21, 24, 25"
+  },
+  {
+   "twist": "Jamie is naturally immune.",
+   "clues": "Scratched in scene 5; never fevers in 6 and 7.",
+   "payoff": "Scene 22"
+  },
+  {
+   "twist": "Linnea is Rourke's informant.",
+   "clues": "Knows the name Lethe-7 in scene 13; never frightened of infected; satellite phone in scene 15.",
+   "payoff": "Scene 26"
+  },
+  {
+   "twist": "Haven is a trial site, not a sanctuary.",
+   "clues": "Numbered wristbands and blood draws in 19; refrigerated trucks in 20.",
+   "payoff": "Scenes 23 and 24"
+  }
+ ],
+ "deaths": [
+  {
+   "who": "Rhea",
+   "scene": 8,
+   "meaning": "Her last broadcast tells the group where Haven is."
+  },
+  {
+   "who": "Gaz",
+   "scene": 28,
+   "meaning": "He overcomes his old freeze; his torch passes to Marcus; his sabotage had caused the breakout, so his death is also his atonement."
+  },
+  {
+   "who": "Toby",
+   "scene": 35,
+   "meaning": "He recognises Marcus and shuts the dosing valve; Marcus finally lets go of his guilt."
+  },
+  {
+   "who": "Rourke (not death)",
+   "scene": 36,
+   "meaning": "He is wiped of grief and memory by his own Mercy."
+  }
+ ],
+ "ending": "Bittersweet and hopeful: the Mercy is stopped, the serum begins to reach people, Toby is buried on Kinder Scout, Rourke sits peacefully with no memory of his son, Priya will face an inquiry, and a faint voice answers on Ollie's radio from another city.",
+ "scenes": [
+  {
+   "n": 1,
+   "act": 1,
+   "title": "The Man on the Moor",
+   "loc": "Kinder Scout plateau, Peak District",
+   "time": "Day 1, 05:40",
+   "weather": "dense freezing fog, light drizzle",
+   "cast": [
+    "MARCUS",
+    "TOBY"
+   ],
+   "beat": "Mountain rescue volunteer Marcus finds a barefoot man in a hospital gown and army greatcoat on the plateau, hypothermic. The man hums a faint four-note tune and cannot say his own name. Marcus sees the dog tags: WREN T. Toby, his army friend, missing eight months and believed dead. Toby does not know him. Marcus wraps him in his own jacket and starts the long carry down.",
+   "emotion": "shock, disbelief, protectiveness",
+   "notes": "Wristband reads ALDERSGATE-0417 (clue). The hum is the hook. Marcus carries his red-handled ice axe."
+  },
+  {
+   "n": 2,
+   "act": 1,
+   "title": "Aldersgate",
+   "loc": "Hope Valley Community Hospital A&E",
+   "time": "Day 1, 08:10",
+   "weather": "grey drizzle outside, fluorescent light inside",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "GAZ",
+    "PEGGY",
+    "TOBY"
+   ],
+   "beat": "Priya, mid double shift, triages Toby: high fever, pupils that barely react, no memory. Gaz keeps order at the door; Peggy waits with a broken wrist and gets her plaster cast. Two men in grey suits from Aldersgate arrive claiming Toby is a voluntary patient. Priya goes pale at the name. Marcus refuses to release him without proper discharge.",
+   "emotion": "tension, suspicion, Priya's hidden fear",
+   "notes": "Plant: Priya flinches at 'Aldersgate'. Peggy now wears a white plaster cast on her left wrist for the rest of the film."
+  },
+  {
+   "n": 3,
+   "act": 1,
+   "title": "Fever",
+   "loc": "Hope Valley Hospital, isolation bay",
+   "time": "Day 1, 09:35",
+   "weather": "overcast, flickering lights",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "TOBY",
+    "GAZ"
+   ],
+   "beat": "Toby's fever passes 41 degrees. He stops responding to his name, hums louder, breaks his restraints and attacks a nurse; the camera cuts away before anything is shown. Alarms ring. Marcus and Gaz drag Toby off, staff panic, and the nurse collapses shaking on the floor.",
+   "emotion": "horror, helplessness",
+   "notes": "Violence is implied only. The nurse is the first infected."
+  },
+  {
+   "n": 4,
+   "act": 1,
+   "title": "Lockdown",
+   "loc": "Hospital corridors and ambulance bay",
+   "time": "Day 1, 10:20",
+   "weather": "rain starting",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "GAZ",
+    "PEGGY",
+    "FEVERED"
+   ],
+   "beat": "Lockdown fails. The infected nurse and others turn into fast, shrieking Fevered. Marcus grabs his rescue kit and ice axe from his car; Gaz locks a fire door behind them; Peggy cannot run so Marcus carries her to an ambulance. Priya drives. As they leave, the Aldersgate van races the opposite way.",
+   "emotion": "fear, adrenaline",
+   "notes": "Priya takes a beige waxed jacket from lost property. Gaz carries his Maglite."
+  },
+  {
+   "n": 5,
+   "act": 1,
+   "title": "Begum Motors",
+   "loc": "Begum Motors garage, Castleton road",
+   "time": "Day 1, 13:30",
+   "weather": "heavy rain",
+   "cast": [
+    "PRIYA",
+    "MARCUS",
+    "GAZ",
+    "PEGGY",
+    "FATIMA",
+    "JAMIE",
+    "FEVERED"
+   ],
+   "beat": "The ambulance is low on fuel; they stop at a roadside garage. Fatima, wrench raised, nearly attacks them. Her infected apprentice bursts from the workshop; Jamie, hiding in the loft, is scratched on the left forearm as Marcus pulls her away. Fatima admits her brother Imran vanished at dawn.",
+   "emotion": "panic, distrust turning to alliance",
+   "notes": "Plant: Jamie's scratch on her LEFT forearm. Imran is missing."
+  },
+  {
+   "n": 6,
+   "act": 1,
+   "title": "The Long Night",
+   "loc": "Begum Motors workshop",
+   "time": "Day 1, 18:00",
+   "weather": "rain on corrugated roof, dusk",
+   "cast": [
+    "PRIYA",
+    "JAMIE",
+    "MARCUS",
+    "FATIMA",
+    "GAZ",
+    "PEGGY"
+   ],
+   "beat": "Priya cleans Jamie's scratch and tells her to stay where everyone can see her tonight. Fatima repairs the ambulance. Over tinned soup Marcus tells Priya about Toby and the army; Priya says nothing about Aldersgate. Gaz argues with Fatima about leaving. Peggy settles them.",
+   "emotion": "fragile calm, guilt",
+   "notes": "Plant: Priya lies by omission. Jamie is watched all night."
+  },
+  {
+   "n": 7,
+   "act": 1,
+   "title": "Radio",
+   "loc": "Begum Motors loft and yard",
+   "time": "Day 1, 23:50",
+   "weather": "clearing rain, cold, moonlight",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "JAMIE",
+    "FATIMA",
+    "GAZ"
+   ],
+   "beat": "A battery radio carries BBC reporter Rhea Calloway and the government's Operation Hearth: stay indoors, Sheffield cordoned. Marcus's sister Naomi is in Sheffield. Priya wants to find where this started; Marcus wants Naomi; Fatima wants Imran. Jamie's fever never comes. Outside, a faint humming drifts across the yard.",
+   "emotion": "conflict, longing, dread",
+   "notes": "Plant: Jamie shows no symptoms eight hours on. The hum is Toby's tune."
+  },
+  {
+   "n": 8,
+   "act": 1,
+   "title": "The Hum",
+   "loc": "Begum Motors yard and back lane",
+   "time": "Day 2, 05:15",
+   "weather": "grey dawn, fog",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "GAZ",
+    "PEGGY",
+    "FATIMA",
+    "JAMIE",
+    "HOLLOW",
+    "RHEA"
+   ],
+   "beat": "Dozens of slow, glassy-eyed Hollows gather silently around the garage, drawn by the hum. The group escapes through the inspection pit and out the back lane. On the radio, Rhea's live broadcast ends when her studio door breaks; she goes silent. Her last words point them to a reception centre called Haven at the old Ashop water works.",
+   "emotion": "grief, resolve",
+   "notes": "END OF ACT 1. Rhea dies on air (offscreen)."
+  },
+  {
+   "n": 9,
+   "act": 2,
+   "title": "Turn Back",
+   "loc": "Moorland road above Edale and army checkpoint",
+   "time": "Day 2, 10:00",
+   "weather": "pale sun, wind",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "GAZ",
+    "FATIMA",
+    "JAMIE",
+    "PEGGY"
+   ],
+   "beat": "The ambulance dies on a moor road. On foot they reach an abandoned army checkpoint with a sign: OPERATION HEARTH - TURN BACK. A loudspeaker voice, Major Hargreaves, orders them away from Sheffield. Marcus argues about his sister; soldiers raise rifles. Hargreaves finally lowers her loudspeaker.",
+   "emotion": "anger, helplessness",
+   "notes": "Ambulance abandoned here. Marcus keeps his ice axe."
+  },
+  {
+   "n": 10,
+   "act": 2,
+   "title": "Burn Clean",
+   "loc": "Army cordon, Edale",
+   "time": "Day 2, 11:30",
+   "weather": "clear and cold",
+   "cast": [
+    "MARCUS",
+    "HARGREAVES",
+    "PRIYA"
+   ],
+   "beat": "Hargreaves privately tells Marcus the cordon will 'burn clean' within a week if containment fails. She gives him the route to Haven and warns it is run by Aldersgate under a government contract. Priya, hearing 'Aldersgate' again, looks away.",
+   "emotion": "bitter honesty, moral unease",
+   "notes": "Foreshadow the burn. Priya flinches again."
+  },
+  {
+   "n": 11,
+   "act": 2,
+   "title": "What We Carry",
+   "loc": "Abandoned farmhouse, Edale valley",
+   "time": "Day 2, 18:30",
+   "weather": "dusk, light rain",
+   "cast": [
+    "PEGGY",
+    "GAZ",
+    "FATIMA",
+    "JAMIE",
+    "MARCUS",
+    "PRIYA"
+   ],
+   "beat": "A quiet evening: Peggy recalls her late husband worked on the Ashop tunnels. Gaz admits he froze once during a knife attack as a police officer and never forgave himself. Fatima confesses she left her brother Imran. Jamie jokes to hide her fear. Priya nearly confesses her own secret but Peggy interrupts.",
+   "emotion": "vulnerability, bonding",
+   "notes": "Plants: Peggy's tunnel knowledge, Gaz's freeze (pays off scene 28), Fatima's guilt."
+  },
+  {
+   "n": 12,
+   "act": 2,
+   "title": "Frequencies",
+   "loc": "Edale village radio repair shop",
+   "time": "Day 3, 09:00",
+   "weather": "fog",
+   "cast": [
+    "OLLIE",
+    "MARCUS",
+    "FATIMA",
+    "JAMIE"
+   ],
+   "beat": "Following a crackling signal, the group finds Ollie hiding in a radio shop attic with a ham radio. He stammers in panic and nearly gives them away to Fevered outside. Jamie calms him by talking about frequencies. He has been listening to a scientist's coded transmissions.",
+   "emotion": "comic relief, fear",
+   "notes": "Ollie joins. Orange running shoes and headset."
+  },
+  {
+   "n": 13,
+   "act": 2,
+   "title": "Lethe-7",
+   "loc": "Edale old mill",
+   "time": "Day 3, 14:00",
+   "weather": "overcast",
+   "cast": [
+    "LINNEA",
+    "PRIYA",
+    "OLLIE",
+    "MARCUS"
+   ],
+   "beat": "Dr Linnea Frost walks calmly out of the mill carrying an orange sample case. She says the pathogen is called Lethe-7, a name nobody in the group has said aloud. Priya freezes. Linnea says a cure may exist in the archives at Aldersgate Hall if they can reach it.",
+   "emotion": "curiosity, unease",
+   "notes": "Foreshadow: Linnea knows 'Lethe-7' before it is said and never fears the infected."
+  },
+  {
+   "n": 14,
+   "act": 2,
+   "title": "The Brute",
+   "loc": "Barn, Edale valley",
+   "time": "Day 3, 17:20",
+   "weather": "heavy rain",
+   "cast": [
+    "GAZ",
+    "MARCUS",
+    "FATIMA",
+    "BRUTE",
+    "JAMIE"
+   ],
+   "beat": "A swollen, steaming Brute, once a rugby player, smashes into the barn. Gaz's ribs crack as he is thrown against a beam. Marcus notices the Brute overheating and drives it into the freezing cattle trough; it collapses, shaking. They learn cold is its weakness.",
+   "emotion": "fear, ingenuity",
+   "notes": "Gaz now has cracked ribs and moves stiffly until his death."
+  },
+  {
+   "n": 15,
+   "act": 2,
+   "title": "Dog Tags",
+   "loc": "Barn camp by a stove",
+   "time": "Day 3, 22:00",
+   "weather": "clear and frosty",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "LINNEA"
+   ],
+   "beat": "Priya and Marcus share a quiet moment beside a stove. He shows her Toby's dog tags and speaks about leaving him wounded under fire. She asks about guilt; she lies when he asks about her past. In the dark, Linnea quietly checks a hidden satellite phone, then puts it away.",
+   "emotion": "intimacy, guilt, deceit",
+   "notes": "Plant: Linnea's satellite phone. NOTE: Marcus does not have the dog tags; he saw them on Toby in scene 1 and remembers."
+  },
+  {
+   "n": 16,
+   "act": 2,
+   "title": "Peggy's Way",
+   "loc": "Edale ridge, old railway ventilation shaft",
+   "time": "Day 4, 08:30",
+   "weather": "mist",
+   "cast": [
+    "PEGGY",
+    "MARCUS",
+    "GAZ",
+    "OLLIE",
+    "FATIMA",
+    "JAMIE",
+    "LINNEA",
+    "PRIYA"
+   ],
+   "beat": "Hollows block the valley route. Peggy leads them to a disused railway ventilation shaft that links to a water tunnel under the ridge toward Ashop. Gaz argues; Peggy's calm authority wins. They descend.",
+   "emotion": "determination, claustrophobia",
+   "notes": "Peggy's moment."
+  },
+  {
+   "n": 17,
+   "act": 2,
+   "title": "Collapse",
+   "loc": "Water tunnel under the ridge",
+   "time": "Day 4, 10:00",
+   "weather": "dark, dripping",
+   "cast": [
+    "MARCUS",
+    "JAMIE",
+    "OLLIE",
+    "FATIMA",
+    "GAZ",
+    "PRIYA",
+    "FEVERED"
+   ],
+   "beat": "In the pitch-dark tunnel, Fevered hunt by sound. Ollie panics, then guides them with the clicks of a handheld radio. A section collapses; Marcus's ice axe is wedged in the rubble and lost as he drags Jamie clear.",
+   "emotion": "terror, then courage",
+   "notes": "MARCUS LOSES THE ICE AXE here. He carries no weapon until Gaz's torch in scene 28."
+  },
+  {
+   "n": 18,
+   "act": 2,
+   "title": "Haven",
+   "loc": "Haven gate, Ashop water works",
+   "time": "Day 4, 15:00",
+   "weather": "low cloud, cold",
+   "cast": [
+    "ROURKE",
+    "PRIYA",
+    "MARCUS",
+    "GAZ",
+    "FATIMA",
+    "JAMIE",
+    "PEGGY",
+    "OLLIE",
+    "LINNEA"
+   ],
+   "beat": "They emerge above Haven: floodlights, fences, tents, tankers. Dr Edmund Rourke welcomes them personally, warm and courteous. He recognises Priya instantly: 'Dr Nair. How good of you to come back.' Priya's face drains; Marcus stares at her.",
+   "emotion": "relief curdling into dread",
+   "notes": "MIDPOINT HOOK. Priya and Rourke know each other."
+  },
+  {
+   "n": 19,
+   "act": 3,
+   "title": "Numbers",
+   "loc": "Haven intake tent",
+   "time": "Day 4, 17:00",
+   "weather": "dusk",
+   "cast": [
+    "MARCUS",
+    "NAOMI",
+    "ROURKE",
+    "PRIYA"
+   ],
+   "beat": "Intake staff give everyone numbered wristbands and take blood 'for safety'. Marcus finds his sister Naomi working in the infirmary; they embrace and he is overwhelmed. Naomi says Dr Rourke has saved many lives. Rourke offers the group beds and a tour.",
+   "emotion": "joy, relief, a seed of unease",
+   "notes": "Foreshadow: wristband numbers, blood draws."
+  },
+  {
+   "n": 20,
+   "act": 3,
+   "title": "Empty Trucks",
+   "loc": "Haven dormitory",
+   "time": "Day 4, 23:00",
+   "weather": "cold night",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "GAZ",
+    "FATIMA"
+   ],
+   "beat": "Marcus asks Priya how Rourke knows her; she says only that she did locum work years ago. Gaz notes guards never let residents near the east wing; Fatima saw refrigerated trucks arrive empty and leave full. Ollie reports the radio tent is locked.",
+   "emotion": "suspicion",
+   "notes": "Seeds for the Quiet Wing."
+  },
+  {
+   "n": 21,
+   "act": 3,
+   "title": "The Signature",
+   "loc": "Haven laboratory annexe",
+   "time": "Day 5, 02:00",
+   "weather": "dim emergency light",
+   "cast": [
+    "PRIYA",
+    "LINNEA"
+   ],
+   "beat": "Priya sneaks into the lab and finds the Lethe-7 safety file: her own signature on the sign-off that omitted a cluster of seizures. Linnea steps from the shadows and tells her to close the file. 'Dr Rourke is not a monster. That is what makes him dangerous.'",
+   "emotion": "shame, shock",
+   "notes": "Audience learns Priya signed the sign-off."
+  },
+  {
+   "n": 22,
+   "act": 3,
+   "title": "Antibodies",
+   "loc": "Haven infirmary",
+   "time": "Day 5, 09:30",
+   "weather": "overcast",
+   "cast": [
+    "PRIYA",
+    "JAMIE",
+    "NAOMI",
+    "LINNEA"
+   ],
+   "beat": "Priya runs Jamie's blood on a field analyser and finds antibodies nobody else in camp has. Jamie is immune. Priya swaps the sample label to hide it from Rourke's screening and tells Jamie to say nothing. Linnea, watching from the doorway, says nothing.",
+   "emotion": "awe, fear, protectiveness",
+   "notes": "Payoff of the scratch from scene 5. Linnea saw."
+  },
+  {
+   "n": 23,
+   "act": 3,
+   "title": "The Quiet Wing",
+   "loc": "Haven east wing, the Quiet Wing",
+   "time": "Day 5, 15:00",
+   "weather": "grey",
+   "cast": [
+    "GAZ",
+    "MARCUS",
+    "TOBY",
+    "ROURKE"
+   ],
+   "beat": "Gaz picks a service lock and finds rows of sedated people and restrained Hollows being studied. In a glass room sits Toby, calm and humming. Marcus is called; Toby's head turns toward his voice. Rourke appears: 'Your friend is my first success.'",
+   "emotion": "horror, grief",
+   "notes": "Haven is a trial site."
+  },
+  {
+   "n": 24,
+   "act": 3,
+   "title": "The Mercy",
+   "loc": "Rourke's office, Haven",
+   "time": "Day 5, 17:00",
+   "weather": "rain",
+   "cast": [
+    "ROURKE",
+    "MARCUS"
+   ],
+   "beat": "Rourke explains: his soldier son died by suicide. Lethe erases the memory of suffering; Toby feels no pain. Lethe-8, he says, will make the infected peaceful and spare every survivor their trauma. He offers Marcus the same peace. Marcus refuses. Rourke slides across a folder: Priya's signed safety report.",
+   "emotion": "temptation, betrayal",
+   "notes": "Rourke's sympathetic motive. The signature reaches Marcus."
+  },
+  {
+   "n": 25,
+   "act": 3,
+   "title": "Confession",
+   "loc": "Haven courtyard",
+   "time": "Day 5, 19:00",
+   "weather": "rain",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "PEGGY",
+    "FATIMA"
+   ],
+   "beat": "Marcus confronts Priya. She confesses: two years ago, under pressure, she signed data she knew was incomplete. He says every death is on that signature. Fatima and Peggy argue over whether to forgive her; the group fractures. Priya's glasses are knocked and cracked in the scuffle.",
+   "emotion": "anger, shame, grief",
+   "notes": "Priya's glasses now have a cracked left lens."
+  },
+  {
+   "n": 26,
+   "act": 3,
+   "title": "Dr Frost",
+   "loc": "Haven medical tent",
+   "time": "Day 5, 21:30",
+   "weather": "storm",
+   "cast": [
+    "JAMIE",
+    "LINNEA",
+    "PRIYA",
+    "OLLIE",
+    "FATIMA"
+   ],
+   "beat": "Rourke's staff come for Jamie for 'follow-up screening'. Jamie says 'Dr Frost told them.' Linnea admits she reported Jamie, believing Rourke could save more people than the group could. Priya slaps her. Fatima takes Linnea's satellite phone. Ollie sees a countdown on a radio tent screen: Operation Hearth, 36 hours.",
+   "emotion": "betrayal, rage",
+   "notes": "Linnea is Rourke's informant. Her satellite phone is gone."
+  },
+  {
+   "n": 27,
+   "act": 3,
+   "title": "Breaker",
+   "loc": "Haven power station",
+   "time": "Day 5, 23:45",
+   "weather": "storm, power flickering",
+   "cast": [
+    "GAZ",
+    "FATIMA",
+    "MARCUS",
+    "JAMIE"
+   ],
+   "beat": "Gaz decides to cut Haven's power to cover Jamie's escape. Fatima shows him the breaker. The lights die; sirens falter; guards scatter. The Quiet Wing's locks, wired to the same circuit, fail.",
+   "emotion": "tension, resolve",
+   "notes": "Unintended consequence: containment fails."
+  },
+  {
+   "n": 28,
+   "act": 3,
+   "title": "The Door",
+   "loc": "Haven east wing corridor",
+   "time": "Day 6, 00:20",
+   "weather": "dark, torch light",
+   "cast": [
+    "GAZ",
+    "MARCUS",
+    "HOLLOW",
+    "FEVERED"
+   ],
+   "beat": "Hollows and Fevered pour into the corridor toward the dormitories. Gaz, ribs cracked, holds the fire door so Marcus can get Jamie and the group out. He remembers the day he froze, and does not freeze now. His torch beam is the last thing Marcus sees. Gaz does not come out.",
+   "emotion": "courage, loss",
+   "notes": "GAZ DIES (cut away). Marcus takes Gaz's Maglite."
+  },
+  {
+   "n": 29,
+   "act": 4,
+   "title": "Burn at Seven",
+   "loc": "Moor above Haven",
+   "time": "Day 6, 05:30",
+   "weather": "dawn frost",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "FATIMA",
+    "JAMIE",
+    "PEGGY",
+    "OLLIE",
+    "LINNEA"
+   ],
+   "beat": "Survivors watch Haven's lights flicker below. Marcus sits with Gaz's torch; Fatima and Peggy quietly mourn. Naomi stayed with the children in the infirmary. A helicopter passes; on Ollie's radio Hargreaves warns that Hearth will burn the valley at 19:00 the next day unless the outbreak is declared contained.",
+   "emotion": "grief, urgency",
+   "notes": "Deadline: 19:00 on Day 7. Marcus now carries Gaz's torch."
+  },
+  {
+   "n": 30,
+   "act": 4,
+   "title": "Everything",
+   "loc": "Edale old mill",
+   "time": "Day 6, 11:00",
+   "weather": "light rain",
+   "cast": [
+    "PRIYA",
+    "LINNEA",
+    "JAMIE",
+    "MARCUS",
+    "OLLIE"
+   ],
+   "beat": "Linnea tells everything: Lethe-8 is complete; Rourke plans to dose Sheffield's reservoir supply from the Ashop works to pacify every infected person and erase the trauma of everyone who drinks it. Jamie's antibodies could make a counter-serum. Priya asks Jamie, who chooses to donate.",
+   "emotion": "dread, courage",
+   "notes": "Jamie chooses. Priya leads the science."
+  },
+  {
+   "n": 31,
+   "act": 4,
+   "title": "Blood and Wire",
+   "loc": "Edale mill, lab corner",
+   "time": "Day 6, 16:00",
+   "weather": "dusk",
+   "cast": [
+    "PRIYA",
+    "JAMIE",
+    "FATIMA",
+    "OLLIE"
+   ],
+   "beat": "Priya processes Jamie's blood in Linnea's portable centrifuge. Jamie shows fear and humour; Priya promises to stay with her. Ollie builds a relay from radio parts, determined to broadcast whatever they find. Fatima sharpens her wrench in silence.",
+   "emotion": "tenderness, tension",
+   "notes": "Serum only works at Stage 1-2."
+  },
+  {
+   "n": 32,
+   "act": 4,
+   "title": "Imran",
+   "loc": "Water tunnel service room",
+   "time": "Day 7, 03:00",
+   "weather": "dark",
+   "cast": [
+    "PEGGY",
+    "MARCUS",
+    "FATIMA",
+    "LINNEA",
+    "IMRAN"
+   ],
+   "beat": "Peggy leads them back through the tunnel. In a service room they find Imran, Fatima's brother, in the early stage of infection, huddled and feverish. Fatima refuses to leave him; instead of fighting, she calms him and locks him safely inside with water.",
+   "emotion": "fear, tenderness",
+   "notes": "Imran is curable (early stage)."
+  },
+  {
+   "n": 33,
+   "act": 4,
+   "title": "First Dose",
+   "loc": "Haven infirmary",
+   "time": "Day 7, 08:00",
+   "weather": "grey morning",
+   "cast": [
+    "NAOMI",
+    "MARCUS",
+    "PRIYA",
+    "JAMIE"
+   ],
+   "beat": "Haven is half-ruined but alive; Naomi has hidden thirty children in the infirmary. She and Marcus reunite. Priya gives the first serum to an early-stage child; the fever breaks within the hour.",
+   "emotion": "relief, awe",
+   "notes": "First proof the serum works."
+  },
+  {
+   "n": 34,
+   "act": 4,
+   "title": "Control Room",
+   "loc": "Ashop treatment works control room",
+   "time": "Day 7, 13:00",
+   "weather": "overcast",
+   "cast": [
+    "ROURKE",
+    "PRIYA",
+    "LINNEA",
+    "MARCUS",
+    "OLLIE"
+   ],
+   "beat": "The group confronts Rourke. He calmly explains his Mercy as he starts the Lethe-8 dosing. Linnea turns against him openly. Ollie, hidden, records everything on his headset and patches into the works' public address and radio network.",
+   "emotion": "dread, defiance",
+   "notes": "Ollie's broadcast begins."
+  },
+  {
+   "n": 35,
+   "act": 4,
+   "title": "Don't Leave Me",
+   "loc": "Treatment works flooded valve chamber",
+   "time": "Day 7, 15:30",
+   "weather": "echoing, cold water",
+   "cast": [
+    "MARCUS",
+    "TOBY",
+    "ROURKE"
+   ],
+   "beat": "Rourke uses Toby's hum to hold the Hollows back and guard the valves. Marcus speaks Toby's old unit call-sign. For one moment Toby knows him: 'Marcus. Don't leave me.' Toby turns on Rourke's guards and heaves the dosing valve shut at the cost of his own life in the cold flooded chamber.",
+   "emotion": "love, grief, release",
+   "notes": "TOBY DIES. Payoff of the dog tags and the hum."
+  },
+  {
+   "n": 36,
+   "act": 4,
+   "title": "Stand Down",
+   "loc": "Ashop treatment works roof",
+   "time": "Day 7, 18:40",
+   "weather": "sunset, orange sky",
+   "cast": [
+    "OLLIE",
+    "PRIYA",
+    "JAMIE",
+    "FATIMA",
+    "ROURKE",
+    "HARGREAVES"
+   ],
+   "beat": "Ollie's broadcast carries Rourke's recorded confession and Priya's own admission to every receiver, including Hargreaves's cordon. The helicopters circle, then pull back; Hearth is cancelled with minutes to spare. In the struggle, Rourke is caught in a burst of Lethe-8 vapour.",
+   "emotion": "suspense, triumph",
+   "notes": "Ollie becomes crucial. Rourke exposed to Lethe-8."
+  },
+  {
+   "n": 37,
+   "act": 5,
+   "title": "Morning",
+   "loc": "Haven infirmary yard",
+   "time": "Day 8, 09:00",
+   "weather": "clear, cold sun",
+   "cast": [
+    "FATIMA",
+    "IMRAN",
+    "NAOMI",
+    "MARCUS",
+    "JAMIE",
+    "PRIYA",
+    "HARGREAVES"
+   ],
+   "beat": "Imran wakes after his serum, weak but himself. Fatima weeps. Hargreaves arrives with medics and tells Priya she will be held to account. Priya says she expects it. Marcus holds Naomi.",
+   "emotion": "relief, accountability",
+   "notes": "Consequence: Priya will face an inquiry."
+  },
+  {
+   "n": 38,
+   "act": 5,
+   "title": "Mercy",
+   "loc": "Aldersgate Hall garden",
+   "time": "Day 9, 11:00",
+   "weather": "mild sun",
+   "cast": [
+    "ROURKE",
+    "PRIYA",
+    "LINNEA"
+   ],
+   "beat": "Rourke sits peacefully on a bench, serene and blank; Lethe-8 has erased his grief. He studies his son's photograph and asks Priya who the young man is. Linnea, in handcuffs, watches. Priya looks at her signature and weeps.",
+   "emotion": "pity, irony",
+   "notes": "Rourke gets his wish and loses everything."
+  },
+  {
+   "n": 39,
+   "act": 5,
+   "title": "The Cairn",
+   "loc": "Kinder Scout summit",
+   "time": "Day 10, 06:00",
+   "weather": "dawn, fog lifting",
+   "cast": [
+    "MARCUS",
+    "PRIYA",
+    "JAMIE"
+   ],
+   "beat": "Marcus buries Toby's body at the cairn where he first found him. He places the dog tags on the stones and hums the tune. Priya and Jamie stand beside him. Marcus finally says goodbye.",
+   "emotion": "grief, release",
+   "notes": "Marcus keeps Gaz's torch; the dog tags stay with Toby."
+  },
+  {
+   "n": 40,
+   "act": 5,
+   "title": "Is Anyone There",
+   "loc": "Ashop radio tent, then the moor",
+   "time": "Day 30, 18:00",
+   "weather": "clear dusk",
+   "cast": [
+    "OLLIE",
+    "MARCUS",
+    "PRIYA",
+    "JAMIE",
+    "FATIMA",
+    "PEGGY"
+   ],
+   "beat": "Weeks later the serum is being made at scale. Ollie hears a faint voice on the radio from another city: 'Is anyone there?' The group gathers around the speaker. Marcus smiles for the first time. The camera pulls out across the quiet moor.",
+   "emotion": "bittersweet hope",
+   "notes": "Ending: bittersweet, not a forced sequel."
+  }
+ ]
+}

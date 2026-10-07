@@ -1,81 +1,59 @@
-# Multi-platform content engine (TikTok + YouTube Shorts + Facebook Reels + Bilibili)
+# THE FORGETTING: daily AI film bot (free, runs on GitHub Actions)
 
-One film is generated per day. From it the engine renders a version for each platform and every platform
-publishes **independently** through an official API. If one fails, the others still go out.
+One episode a day of a 40-episode realistic zombie film (`story/bible.json`), made in the cloud and scheduled by Buffer to
+**YouTube Shorts, TikTok and Facebook Reels**. Your laptop can be off. The full production package is in `FILM_BIBLE.md`.
+
+**Film mode** (default, `"mode": "film"` in config.json) reads the next episode from the story bible, keeps characters
+looking the same by repeating their locked descriptions in every image prompt, gives every character their own voice, and
+tracks injuries, objects and who is alive from episode to episode. Set `"mode": "news"` for the old daily news-story mode.
 
 ```
-trends -> script (fact-checked) -> voice -> images -> music
-                         |
-                  ONE clean master
-        +----------+-----------+------------+
-     tiktok     youtube     facebook      bilibili
-     9:16       9:16        9:16 (<=90s)  16:9 blurred frame
-     hook+subs  Shorts copy Reels copy    English + Chinese subs, Chinese copy, cover
-        |           |           |             |
-   platforms/   platforms/  platforms/    platforms/
-   tiktok.py    youtube.py  facebook.py   bilibili.py   <- independent modules
+Google Trends UK + BBC RSS -> Gemini (script + fact-check + Chinese) -> Kokoro British voice
+-> Pollinations Flux images -> FFmpeg (zoom, subtitles, music) -> GitHub Release (public link)
+-> Buffer API (scheduled at your chosen time)
 ```
 
-Everything is free / open source: GitHub Actions, Kokoro voice, Pollinations images, Buffer free plan,
-Gemini free tier, FFmpeg. Nothing paid is added. (Optional paid upgrades, off by default: fal.ai video, ElevenLabs.)
+## Setup (in order)
 
-## Rolling queue (what makes it hands-free)
-Buffer's free plan holds 10 queued posts per channel, so a 30-day queue is impossible without paying. Instead the
-engine keeps the **next 9 days** scheduled on every platform and tops the queue up once a day (default: build
-the missing days, up to 4 films per run). Even if a daily run fails, the queue keeps posting for days and the next run repairs
-the gap. First fill: run the workflow once with `films` = 9. Settings: `LOOKAHEAD_DAYS` (max 10), `MAX_FILMS_PER_RUN`.
-Videos for later days are written with an evergreen angle because they publish up to 9 days after the trend.
+### 1. Buffer
+1. Make a free account at buffer.com and connect your **YouTube**, **TikTok** and **Facebook Page** (free plan = 3 channels).
+2. Open https://publish.buffer.com/settings/api and create an **API key**. Copy it.
 
-## Upgrading from the TikTok-only version
-1. Replace the files in your repo with this project (Add file > Upload files; same names overwrite).
-   Delete any leftover `pipeline (3).py`-style copies.
-2. Replace `.github/workflows/daily.yml` with the new one (it now saves state even after a partial failure).
-3. Do nothing else: with no new settings it behaves exactly like before (TikTok only).
+### 2. Gemini key
+https://aistudio.google.com/apikey -> Create API key.
 
-## Turning platforms on
-Settings > Secrets and variables > Actions > **Variables**: `PLATFORMS` = `tiktok,youtube,facebook,bilibili`
-(any subset). A platform that is enabled but not configured does NOT fail: it produces a ready-to-upload file
-in the run's Artifacts instead.
+### 3. Optional: Pollinations key (makes images faster)
+Sign up at https://enter.pollinations.ai and create a key. Without it the bot still works but waits ~16 s between images.
 
-| Platform | Recommended route (free) | Secrets to add |
-|---|---|---|
-| TikTok | Buffer official API (already working) | `BUFFER_CHANNEL_ID` |
-| YouTube Shorts | **Buffer** | `YT_BUFFER_CHANNEL_ID` |
-| Facebook Reels | **Buffer** (or direct Graph API) | `FB_BUFFER_CHANNEL_ID` (or `FB_PAGE_ID` + `FB_PAGE_TOKEN`) |
-| Bilibili | manual-upload package (no approval needed) | none |
+### 4. GitHub Secrets
+Repo -> Settings -> Secrets and variables -> Actions -> New repository secret:
 
-Buffer's free plan allows 3 channels: TikTok + YouTube + Facebook fits exactly. Connect the YouTube channel and
-Facebook Page in Buffer, then get each channel ID the same way you did for TikTok (the code in the address bar
-when you open that channel's settings), or run `python buffer_channels.py`.
+| Name | Value |
+|---|---|
+| `GEMINI_API_KEY` | from step 2 |
+| `BUFFER_API_KEY` | from step 1 |
+| `POLLINATIONS_API_KEY` | from step 3 (optional) |
 
-### Default posting times (UK time, GMT/BST automatic)
-YouTube 18:00, TikTok 19:30, Facebook 21:00 (staggered on purpose). Change with variables `YT_TIME_UK`,
-`POST_TIME_UK`, `FB_TIME_UK`. Bilibili has no schedule field in its open API.
+### 5. Choose your post time
+Edit `config.json`: `"post_time_utc": "13:00"` is the daily time in **UTC**. The bot builds each film hours early (04:00 UTC) and Buffer posts it at your time.
+`channels` says which version each platform gets: `"en"` (English subtitles) or `"zh"` (Chinese subtitles).
 
-## Official-API facts that shape this design (checked October 2026)
-- **YouTube direct (`videos.insert`)**: Google locks videos uploaded by *unaudited* API projects to private.
-  Direct mode (`YT_MODE=direct`, secrets `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, scope
-  `youtube.upload`) therefore only goes public after your Google Cloud project passes YouTube's API audit.
-  Your OAuth consent screen must be set to **In production**, or the refresh token dies after 7 days.
-  That is why Buffer (whose integration is already audited) is the recommended route. Uploads set the
-  synthetic-media disclosure flag.
-- **Facebook Reels API**: Page only (not personal profiles), 9:16, 3-90 seconds, `pages_manage_posts`.
-  Scripts are now written to 160-205 words so Reels stay under 90 s; a longer film is refused for Facebook
-  (and reported) rather than cut. Direct mode needs a Meta app and a long-lived Page token.
-- **Bilibili Open Platform**: video submission exists (OAuth + HMAC-signed requests) but requires a developer
-  application approved by Bilibili. `BILI_PUBLISH=1` plus `BILI_CLIENT_ID`, `BILI_APP_SECRET`,
-  `BILI_ACCESS_TOKEN`, `BILI_MID` switches the module to the official API. **It is written from Bilibili's docs and
-  has not been tested against a live account.** No unofficial cookie/login tools are used. Until then you get a
-  package: video, cover, Chinese title/description/tags and upload instructions (tick Bilibili's AI-content declaration).
+### 6. Test without posting
+Actions tab -> **Daily Short Film** -> Run workflow (leave **dry_run ticked**). When it finishes, open the run and download the **test-film** file at the bottom. Nothing is posted.
 
-## What was tested here (and what was not)
-Tested with FFmpeg and simulated APIs: the render of all four versions from one master, the TikTok Buffer request
-(byte-identical to the one that works in production), failure isolation, no duplicates on re-run, package output,
-Bilibili request signing. **Not** tested against live YouTube, Facebook or Bilibili accounts. Enable one platform
-at a time and watch its first run.
+### 7. Go live
+Run the workflow again with **dry_run unticked**. From then on it runs every day by itself.
 
-## Rules built in
-AI-content disclosure on every platform that has a flag (TikTok `isAiGenerated`, YouTube synthetic media,
-caption note everywhere); no real people/brands in prompts; original script, voice, images each day; music only
-Kevin MacLeod (CC BY 4.0, credit added to every caption) or your own tracks with `music/LICENCES.md`;
-each platform's copy is written for that platform and nothing is posted twice.
+## Good to know
+- **Use a public repository.** Videos are hosted as GitHub Release files, and Buffer needs a public link. Your keys stay private in Secrets.
+- **Buffer free plan:** 10 queued posts per channel and 3,000 API requests per 30 days. One film a day fits.
+- **Music:** Kevin MacLeod (CC BY 4.0). The bot adds the required credit line to the post text. Your own MP3s placed in a `music/` folder are used instead.
+- **AI disclosure:** posts are flagged as AI-generated on YouTube and TikTok.
+- **Fact-check:** Gemini double-checks the script, but it is not perfect. Review early posts, and avoid news topics you would not want to be wrong about.
+- **Free tiers change.** If a step fails, the log in the Actions tab says which one.
+
+## Film mode notes
+- Episode 1 goes out first. Dry runs never move the story forward; only a real post does.
+- Characters are photoreal AI stills with camera moves, not moving video actors. Faces stay *similar* across shots, not identical: that is the limit of free image tools.
+- To change a character, edit their `look` in `story/bible.json`, then run `python tools/make_film_bible.py` to refresh `FILM_BIBLE.md`.
+- When all 40 episodes are posted the bot stops by itself.

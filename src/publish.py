@@ -14,11 +14,13 @@ KEEP_RELEASES = 20  # Buffer fetches the file at post time, so keep recent ones
 def upload_release(tag, files, title, notes):
     """Create a release with the video files; return {filename: public_url}."""
     repo = os.environ["GITHUB_REPOSITORY"]
-    subprocess.run(
+    res = subprocess.run(
         ["gh", "release", "create", tag, *[str(f) for f in files],
          "--repo", repo, "--title", title, "--notes", notes],
-        check=True,
+        capture_output=True, text=True,
     )
+    if res.returncode != 0:
+        raise RuntimeError(f"GitHub release failed: {res.stderr.strip() or res.stdout.strip()}")
     return {f.name: f"https://github.com/{repo}/releases/download/{tag}/{f.name}" for f in files}
 
 
@@ -38,15 +40,24 @@ def cleanup_old_releases():
 
 
 # ---------- Buffer ----------
+def _clean_key(name):
+    """Secrets pasted into GitHub often carry a hidden newline or space; remove them."""
+    key = os.environ.get(name, "").strip().strip('"').strip("'").strip()
+    if not key:
+        raise RuntimeError(f"The {name} secret is empty or missing in GitHub Secrets")
+    return key
+
+
 def _gql(query, variables=None):
     r = requests.post(
         BUFFER_URL,
-        headers={"Authorization": f"Bearer {os.environ['BUFFER_API_KEY']}",
+        headers={"Authorization": f"Bearer {_clean_key('BUFFER_API_KEY')}",
                  "Content-Type": "application/json"},
         json={"query": query, "variables": variables or {}},
         timeout=60,
     )
-    r.raise_for_status()
+    if r.status_code >= 400:
+        raise RuntimeError(f"Buffer HTTP {r.status_code}: {r.text[:600]}")
     data = r.json()
     if data.get("errors"):
         raise RuntimeError(f"Buffer API error: {data['errors']}")

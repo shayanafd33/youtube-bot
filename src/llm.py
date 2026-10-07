@@ -46,7 +46,7 @@ def _call(cfg_model, prompt, retries=3):
         for attempt in range(retries):
             r = requests.post(
                 url,
-                headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
+                headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"].strip()},
                 json={
                     "contents": [{"parts": [{"text": prompt}]}],
                     "generationConfig": {"responseMimeType": "application/json"},
@@ -144,4 +144,69 @@ Keep the same number of lines, in the same order. Keep each line concise.
 Lines: {json.dumps(narrations, ensure_ascii=False)}
 
 Return ONLY JSON: {{"lines": ["...", "..."], "title": "Chinese title", "description": "Chinese description"}}"""
+    return _call(cfg["gemini_model"], prompt)
+
+
+# ---------------- film mode ----------------
+def write_episode(cfg, bible, film, scene, next_scene):
+    """Expand one scene beat from the bible into shots with dialogue, keeping continuity."""
+    cast_ids = list(scene["cast"])
+    humans = [c for c in cast_ids if c in bible["characters"]]
+    cast_info = "\n".join(
+        f"- {c}: {bible['characters'][c]['name']} | style: {bible['characters'][c].get('speaking_style', 'plain')}"
+        f" | personality: {bible['characters'][c].get('personality', '')}"
+        for c in humans
+    )
+    infected_ids = [c for c in cast_ids if c in bible["infected"]]
+    state_now = {c: film["chars"][c] for c in cast_ids if c in film["chars"]}
+    dead = [c for c, v in film["chars"].items() if str(v.get("status", "")).lower().startswith("dead")]
+    recap = " ".join(film["summaries"][-3:]) or "This is the first episode."
+    nxt = f"{next_scene['title']}: {next_scene['beat']}" if next_scene else "This is the final episode."
+    prompt = f"""You are the screenwriter and director of a realistic British survival-horror film called "{bible['title']}".
+You are writing EPISODE {scene['n']} of {len(bible['scenes'])} (about 75 seconds when performed).
+
+FILM RULES: {bible['dialogue_rules']}
+WORLD: {json.dumps(bible['world'], ensure_ascii=False)}
+INFECTION RULES (never break them): {json.dumps(bible['infection'], ensure_ascii=False)}
+
+THIS EPISODE (follow the beat faithfully, do not add major events):
+Title: {scene['title']}
+Location: {scene['loc']} | Time: {scene['time']} | Weather: {scene['weather']}
+Beat: {scene['beat']}
+Main emotion: {scene['emotion']}
+Continuity notes: {scene['notes']}
+
+CAST (use ONLY these ids as characters and speakers): {cast_ids}
+{cast_info}
+Infected ids available as characters (never speakers): {infected_ids}
+Speakers may also be NARRATOR (use at most once, only for a short place-and-time title line).
+Characters who are DEAD and must not appear: {dead}
+
+CONTINUITY TRACKER NOW: {json.dumps(state_now, ensure_ascii=False)}
+PREVIOUSLY: {recap}
+NEXT EPISODE (lead into it, do not show it): {nxt}
+
+Return ONLY JSON:
+{{
+  "episode_title": "short title",
+  "description": "2 teaser sentences, no spoilers beyond this episode",
+  "shots": [
+    {{
+      "characters": ["MARCUS"],
+      "camera": "shot size, lens and camera movement",
+      "visual": "exactly what the image shows: action, facial expression, emotion, body language, key props",
+      "lines": [{{"speaker": "MARCUS", "text": "spoken words"}}]
+    }}
+  ],
+  "continuity_update": {{"MARCUS": {{"status": "alive", "visible": "ALL currently visible injuries or costume changes", "carries": "objects held", "knows": "key facts learned"}}}},
+  "summary": "two sentences recapping what happened, for the next episode"
+}}
+
+RULES:
+- 8 to 10 shots. Each shot lists at most TWO named cast ids in "characters" (plus at most one infected id). Keep the same faces and costumes by never describing them in "visual": describe only action, expression, emotion, and props.
+- A shot may have 0, 1 or 2 lines. Total spoken words across the episode: 150 to 190. Each line under 20 words. Natural British speech, interruptions and silences allowed.
+- Show fear, anger, grief and relief through expression and body language. Violence is never shown; cut away.
+- Respect continuity: injuries, lost or held objects, who knows what, who is alive. In "continuity_update" include every cast character whose appearance, objects, knowledge or status changed.
+- Open with a strong hook image and end on a small cliffhanger or emotional beat that leads into the next episode.
+- No gore, no blood close-ups, no real people, no brand names."""
     return _call(cfg["gemini_model"], prompt)

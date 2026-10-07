@@ -12,8 +12,8 @@ W, H = 720, 1280  # generated size; FFmpeg scales up to 1080x1920
 STYLE = "cinematic film still, moody natural lighting, shallow depth of field, vertical composition, no text, no watermark. "
 
 
-def _url(prompt, model, seed, key):
-    prompt = quote((STYLE + prompt)[:450])
+def _url(prompt, model, seed, key, style=STYLE):
+    prompt = quote((style + prompt)[:1500])
     if key:
         return (f"https://gen.pollinations.ai/image/{prompt}"
                 f"?model={model}&width={W}&height={H}&seed={seed}&key={key}")
@@ -27,7 +27,7 @@ def _fallback(dest):
          "-i", f"color=c=0x16213e:s={W}x{H}", "-frames:v", "1", dest])
 
 
-def fetch_images(scenes, model, workdir):
+def fetch_images(scenes, model, workdir, style=STYLE):
     key = os.getenv("POLLINATIONS_API_KEY", "").strip()
     pause = 2 if key else 16  # anonymous use is throttled to roughly 1 request / 15 s
     paths = []
@@ -35,9 +35,9 @@ def fetch_images(scenes, model, workdir):
         dest = str(workdir / f"img{i}.jpg")
         ok = False
         for attempt in range(4):
-            seed = random.randint(1, 999999)
+            seed = scene.get("seed") if (attempt == 0 and scene.get("seed")) else random.randint(1, 999999)
             try:
-                r = requests.get(_url(scene["image_prompt"], model, seed, key), timeout=180)
+                r = requests.get(_url(scene["image_prompt"], model, seed, key, style), timeout=180)
                 if r.status_code == 200 and r.headers.get("content-type", "").startswith("image") \
                         and len(r.content) > 5000:
                     with open(dest, "wb") as f:

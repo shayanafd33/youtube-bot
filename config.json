@@ -9,7 +9,7 @@
   "scenes": 10,
   "voice": "bf_emma",
   "speech_speed": 1.0,
-  "gemini_model": "gemini-2.5-flash",
   "image_model": "flux",
-  "music": true
+  "music": true,
+  "mode": "film"
 }

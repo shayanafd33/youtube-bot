@@ -1,8 +1,39 @@
 {
   "credit_template": "Music: \"{title}\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
   "tracks": [
-    {"title": "Fluidscape", "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fluidscape.mp3"},
-    {"title": "Long Note Four", "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Long%20Note%20Four.mp3"},
-    {"title": "Dark Fog", "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dark%20Fog.mp3"}
+    {
+      "title": "Fluidscape",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fluidscape.mp3"
+    },
+    {
+      "title": "Long Note Four",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Long%20Note%20Four.mp3"
+    },
+    {
+      "title": "Dark Fog",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dark%20Fog.mp3"
+    }
+  ],
+  "film_tracks": [
+    {
+      "title": "Dark Fog",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dark%20Fog.mp3"
+    },
+    {
+      "title": "Lightless Dawn",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Lightless%20Dawn.mp3"
+    },
+    {
+      "title": "Gathering Darkness",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Gathering%20Darkness.mp3"
+    },
+    {
+      "title": "Ghost Story",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Ghost%20Story.mp3"
+    },
+    {
+      "title": "Long Note Four",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Long%20Note%20Four.mp3"
+    }
   ]
 }
