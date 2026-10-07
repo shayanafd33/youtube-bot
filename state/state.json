@@ -1,1 +1,96 @@
-{"used_topics": [], "last_due": ""}
+{
+  "used_topics": [],
+  "last_due": "2026-10-08T13:00:00+00:00",
+  "film": {
+    "scene_index": 1,
+    "summaries": [
+      "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention."
+    ],
+    "chars": {
+      "MARCUS": {
+        "status": "alive",
+        "visible": "wet mountain rescue gear, now missing red outer jacket, carrying Toby on his back",
+        "carries": "red-handled ice axe, Toby Wren",
+        "knows": "Toby Wren is alive, has a severe fever, cannot remember him, and has an Aldersgate wristband"
+      },
+      "PRIYA": {
+        "status": "alive",
+        "visible": "",
+        "carries": "penlight",
+        "knows": "she signed the Aldersgate safety summary two years ago (secret)"
+      },
+      "ROURKE": {
+        "status": "alive",
+        "visible": "",
+        "carries": "silver fountain pen",
+        "knows": "everything about Lethe-7"
+      },
+      "TOBY": {
+        "status": "alive (infected Alpha)",
+        "visible": "hospital gown, army greatcoat, bare feet, Aldersgate wristband 'ALDERSGATE-0417', silver dog tags, wrapped in Marcus's red jacket",
+        "carries": "dog tags",
+        "knows": "nothing, memory erased, only remembers a four-note hum"
+      },
+      "GAZ": {
+        "status": "alive",
+        "visible": "",
+        "carries": "heavy Maglite torch",
+        "knows": ""
+      },
+      "FATIMA": {
+        "status": "alive",
+        "visible": "",
+        "carries": "adjustable wrench",
+        "knows": "her brother Imran is missing"
+      },
+      "LINNEA": {
+        "status": "alive",
+        "visible": "",
+        "carries": "orange sample case, hidden satellite phone",
+        "knows": "she informs for Rourke (secret)"
+      },
+      "JAMIE": {
+        "status": "alive",
+        "visible": "",
+        "carries": "compass, two-way radio",
+        "knows": ""
+      },
+      "PEGGY": {
+        "status": "alive",
+        "visible": "",
+        "carries": "handbag with flask",
+        "knows": "the Ashop water tunnels"
+      },
+      "OLLIE": {
+        "status": "alive",
+        "visible": "",
+        "carries": "ham radio, headset",
+        "knows": ""
+      },
+      "NAOMI": {
+        "status": "alive",
+        "visible": "",
+        "carries": "",
+        "knows": ""
+      },
+      "HARGREAVES": {
+        "status": "alive",
+        "visible": "",
+        "carries": "",
+        "knows": ""
+      },
+      "RHEA": {
+        "status": "alive",
+        "visible": "",
+        "carries": "",
+        "knows": ""
+      },
+      "IMRAN": {
+        "status": "alive",
+        "visible": "",
+        "carries": "",
+        "knows": ""
+      }
+    }
+  }
+}
