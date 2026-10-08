@@ -1,23 +1,24 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-08T13:00:00+00:00",
+  "last_due": "2026-10-09T13:00:00+00:00",
   "film": {
-    "scene_index": 1,
+    "scene_index": 2,
     "summaries": [
-      "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention."
+      "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
+      "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
-        "visible": "wet mountain rescue gear, now missing red outer jacket, carrying Toby on his back",
-        "carries": "red-handled ice axe, Toby Wren",
-        "knows": "Toby Wren is alive, has a severe fever, cannot remember him, and has an Aldersgate wristband"
+        "visible": "wet mountain rescue gear, missing red outer jacket",
+        "carries": "red-handled ice axe",
+        "knows": "Toby Wren is alive, has a severe fever, cannot remember him, has an Aldersgate wristband, and Aldersgate representatives are actively trying to claim him."
       },
       "PRIYA": {
         "status": "alive",
-        "visible": "",
-        "carries": "penlight",
-        "knows": "she signed the Aldersgate safety summary two years ago (secret)"
+        "visible": "hospital scrubs",
+        "carries": "penlight, syringe",
+        "knows": "she signed the Aldersgate safety summary two years ago (secret); Toby's temperature is 39.2C with fixed pupils; Aldersgate Clinical Research wants him back immediately."
       },
       "ROURKE": {
         "status": "alive",
@@ -27,15 +28,15 @@
       },
       "TOBY": {
         "status": "alive (infected Alpha)",
-        "visible": "hospital gown, army greatcoat, bare feet, Aldersgate wristband 'ALDERSGATE-0417', silver dog tags, wrapped in Marcus's red jacket",
+        "visible": "hospital gown, army greatcoat, bare feet, Aldersgate wristband, silver dog tags",
         "carries": "dog tags",
-        "knows": "nothing, memory erased, only remembers a four-note hum"
+        "knows": "nothing, memory erased; instinctively hums a four-note melody."
       },
       "GAZ": {
         "status": "alive",
-        "visible": "",
+        "visible": "high-visibility security vest",
         "carries": "heavy Maglite torch",
-        "knows": ""
+        "knows": "two men in grey suits from Aldersgate are at the hospital doors demanding Toby's release."
       },
       "FATIMA": {
         "status": "alive",
@@ -57,7 +58,7 @@
       },
       "PEGGY": {
         "status": "alive",
-        "visible": "",
+        "visible": "wearing a fresh white plaster cast on her left wrist",
         "carries": "handbag with flask",
         "knows": "the Ashop water tunnels"
       },
