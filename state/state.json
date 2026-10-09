@@ -1,24 +1,25 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-09T13:00:00+00:00",
+  "last_due": "2026-10-10T13:00:00+00:00",
   "film": {
-    "scene_index": 2,
+    "scene_index": 3,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
-      "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate."
+      "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
+      "Toby's extreme fever causes him to snap his restraints and violently attack a nurse. As the hospital alarms begin to blare, Priya realizes the virus is spreading rapidly through bodily fluids and urges an immediate lockdown."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
-        "visible": "wet mountain rescue gear, missing red outer jacket",
-        "carries": "red-handled ice axe",
-        "knows": "Toby Wren is alive, has a severe fever, cannot remember him, has an Aldersgate wristband, and Aldersgate representatives are actively trying to claim him."
+        "visible": "wet mountain rescue gear, missing red outer jacket, sweat-stained",
+        "carries": "none",
+        "knows": "Toby's fever has passed 41C, Toby has inhuman strength, and Toby has violently attacked a nurse after his restraints snapped."
       },
       "PRIYA": {
         "status": "alive",
-        "visible": "hospital scrubs",
-        "carries": "penlight, syringe",
-        "knows": "she signed the Aldersgate safety summary two years ago (secret); Toby's temperature is 39.2C with fixed pupils; Aldersgate Clinical Research wants him back immediately."
+        "visible": "hospital scrubs, face pale with fear",
+        "carries": "penlight",
+        "knows": "Toby's pupils are fixed, the infection is highly contagious via bodily fluids, and the attacked nurse is already turning."
       },
       "ROURKE": {
         "status": "alive",
@@ -28,15 +29,15 @@
       },
       "TOBY": {
         "status": "alive (infected Alpha)",
-        "visible": "hospital gown, army greatcoat, bare feet, Aldersgate wristband, silver dog tags",
+        "visible": "hospital gown, army greatcoat, bare feet, broken wrist restraints",
         "carries": "dog tags",
-        "knows": "nothing, memory erased; instinctively hums a four-note melody."
+        "knows": "nothing, completely consumed by the fever and instinct to attack."
       },
       "GAZ": {
         "status": "alive",
-        "visible": "high-visibility security vest",
+        "visible": "high-visibility security vest, disheveled from struggle",
         "carries": "heavy Maglite torch",
-        "knows": "two men in grey suits from Aldersgate are at the hospital doors demanding Toby's release."
+        "knows": "Toby possesses unnatural strength and is highly dangerous."
       },
       "FATIMA": {
         "status": "alive",
