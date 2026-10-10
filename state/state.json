@@ -1,25 +1,26 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-10T13:00:00+00:00",
+  "last_due": "2026-10-11T13:00:00+00:00",
   "film": {
-    "scene_index": 3,
+    "scene_index": 4,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
-      "Toby's extreme fever causes him to snap his restraints and violently attack a nurse. As the hospital alarms begin to blare, Priya realizes the virus is spreading rapidly through bodily fluids and urges an immediate lockdown."
+      "Toby's extreme fever causes him to snap his restraints and violently attack a nurse. As the hospital alarms begin to blare, Priya realizes the virus is spreading rapidly through bodily fluids and urges an immediate lockdown.",
+      "Lockdown fails at the hospital as the infected nurse turns, forcing Marcus, Priya, Gaz, and Peggy to flee in an ambulance. As they speed away, an Aldersgate van races toward the abandoned facility."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
-        "visible": "wet mountain rescue gear, missing red outer jacket, sweat-stained",
-        "carries": "none",
-        "knows": "Toby's fever has passed 41C, Toby has inhuman strength, and Toby has violently attacked a nurse after his restraints snapped."
+        "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
+        "carries": "ice axe",
+        "knows": "the hospital is overrun and containment has completely failed."
       },
       "PRIYA": {
         "status": "alive",
-        "visible": "hospital scrubs, face pale with fear",
-        "carries": "penlight",
-        "knows": "Toby's pupils are fixed, the infection is highly contagious via bodily fluids, and the attacked nurse is already turning."
+        "visible": "hospital scrubs under a beige waxed jacket, face pale",
+        "carries": "ambulance keys",
+        "knows": "the infection spreads instantly and the facility is compromised."
       },
       "ROURKE": {
         "status": "alive",
@@ -35,9 +36,9 @@
       },
       "GAZ": {
         "status": "alive",
-        "visible": "high-visibility security vest, disheveled from struggle",
+        "visible": "high-visibility security vest, damp",
         "carries": "heavy Maglite torch",
-        "knows": "Toby possesses unnatural strength and is highly dangerous."
+        "knows": "they must flee the valley immediately."
       },
       "FATIMA": {
         "status": "alive",
@@ -59,9 +60,9 @@
       },
       "PEGGY": {
         "status": "alive",
-        "visible": "wearing a fresh white plaster cast on her left wrist",
+        "visible": "fresh white plaster cast on left wrist",
         "carries": "handbag with flask",
-        "knows": "the Ashop water tunnels"
+        "knows": "Marcus won't leave her behind."
       },
       "OLLIE": {
         "status": "alive",
