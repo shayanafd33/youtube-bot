@@ -1,26 +1,27 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-11T13:00:00+00:00",
+  "last_due": "2026-10-12T13:00:00+00:00",
   "film": {
-    "scene_index": 4,
+    "scene_index": 5,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
       "Toby's extreme fever causes him to snap his restraints and violently attack a nurse. As the hospital alarms begin to blare, Priya realizes the virus is spreading rapidly through bodily fluids and urges an immediate lockdown.",
-      "Lockdown fails at the hospital as the infected nurse turns, forcing Marcus, Priya, Gaz, and Peggy to flee in an ambulance. As they speed away, an Aldersgate van races toward the abandoned facility."
+      "Lockdown fails at the hospital as the infected nurse turns, forcing Marcus, Priya, Gaz, and Peggy to flee in an ambulance. As they speed away, an Aldersgate van races toward the abandoned facility.",
+      "After their ambulance runs out of fuel at Begum Motors, the group survives an attack by Fatima's turned apprentice, whom Gaz traps inside the garage. During the chaos, Jamie suffers a scratch on her left forearm, leaving Priya horrified as Fatima reveals her brother Imran has vanished."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
         "carries": "ice axe",
-        "knows": "the hospital is overrun and containment has completely failed."
+        "knows": "the ambulance is completely out of fuel; Fatima's apprentice was fevered; Imran is missing."
       },
       "PRIYA": {
         "status": "alive",
-        "visible": "hospital scrubs under a beige waxed jacket, face pale",
-        "carries": "ambulance keys",
-        "knows": "the infection spreads instantly and the facility is compromised."
+        "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
+        "carries": "ambulance keys, medical bandage wrapper",
+        "knows": "Jamie was scratched on her left forearm."
       },
       "ROURKE": {
         "status": "alive",
@@ -42,9 +43,9 @@
       },
       "FATIMA": {
         "status": "alive",
-        "visible": "",
-        "carries": "adjustable wrench",
-        "knows": "her brother Imran is missing"
+        "visible": "grease-stained mechanics coveralls, wet hair, holding nothing",
+        "carries": "",
+        "knows": "Sean turned into an aggressive fevered host; Imran vanished at dawn; the sickness came from the hospital."
       },
       "LINNEA": {
         "status": "alive",
@@ -54,9 +55,9 @@
       },
       "JAMIE": {
         "status": "alive",
-        "visible": "",
+        "visible": "torn jacket sleeve on left forearm, fresh scratch on left forearm bound in white bandage",
         "carries": "compass, two-way radio",
-        "knows": ""
+        "knows": "she was scratched by a fevered apprentice."
       },
       "PEGGY": {
         "status": "alive",
