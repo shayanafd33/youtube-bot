@@ -1,27 +1,28 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-12T13:00:00+00:00",
+  "last_due": "2026-10-13T13:00:00+00:00",
   "film": {
-    "scene_index": 5,
+    "scene_index": 6,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
       "Toby's extreme fever causes him to snap his restraints and violently attack a nurse. As the hospital alarms begin to blare, Priya realizes the virus is spreading rapidly through bodily fluids and urges an immediate lockdown.",
       "Lockdown fails at the hospital as the infected nurse turns, forcing Marcus, Priya, Gaz, and Peggy to flee in an ambulance. As they speed away, an Aldersgate van races toward the abandoned facility.",
-      "After their ambulance runs out of fuel at Begum Motors, the group survives an attack by Fatima's turned apprentice, whom Gaz traps inside the garage. During the chaos, Jamie suffers a scratch on her left forearm, leaving Priya horrified as Fatima reveals her brother Imran has vanished."
+      "After their ambulance runs out of fuel at Begum Motors, the group survives an attack by Fatima's turned apprentice, whom Gaz traps inside the garage. During the chaos, Jamie suffers a scratch on her left forearm, leaving Priya horrified as Fatima reveals her brother Imran has vanished.",
+      "Priya bound Jamie's scratch and ordered her kept under constant watch through the night while Fatima repaired the ambulance's fuel lines. Tensions boiled over as Marcus questioned Priya about Toby's military connections and Gaz clashed with Fatima over leaving before Peggy restored order."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
         "carries": "ice axe",
-        "knows": "the ambulance is completely out of fuel; Fatima's apprentice was fevered; Imran is missing."
+        "knows": "the ambulance is completely out of fuel; Fatima's apprentice was fevered; Imran is missing; Toby was known to military before outbreak."
       },
       "PRIYA": {
         "status": "alive",
         "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
-        "carries": "ambulance keys, medical bandage wrapper",
-        "knows": "Jamie was scratched on her left forearm."
+        "carries": "ambulance keys",
+        "knows": "Jamie was scratched on her left forearm; Marcus suspects military ties to Toby; lied to Marcus about Aldersgate's full involvement."
       },
       "ROURKE": {
         "status": "alive",
@@ -43,9 +44,9 @@
       },
       "FATIMA": {
         "status": "alive",
-        "visible": "grease-stained mechanics coveralls, wet hair, holding nothing",
-        "carries": "",
-        "knows": "Sean turned into an aggressive fevered host; Imran vanished at dawn; the sickness came from the hospital."
+        "visible": "grease-stained mechanics coveralls, wet hair, smudge of dark engine grease on hands",
+        "carries": "rag",
+        "knows": "ambulance fuel lines cleared but fuel tank is empty; Sean turned; Imran vanished; sickness came from hospital."
       },
       "LINNEA": {
         "status": "alive",
@@ -55,9 +56,9 @@
       },
       "JAMIE": {
         "status": "alive",
-        "visible": "torn jacket sleeve on left forearm, fresh scratch on left forearm bound in white bandage",
+        "visible": "torn jacket sleeve on left forearm, freshly re-bandaged scratch on left forearm",
         "carries": "compass, two-way radio",
-        "knows": "she was scratched by a fevered apprentice."
+        "knows": "she was scratched by a fevered apprentice; group is watching her closely."
       },
       "PEGGY": {
         "status": "alive",
