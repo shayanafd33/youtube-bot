@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-14T13:00:00+00:00",
+  "last_due": "2026-10-15T13:00:00+00:00",
   "film": {
-    "scene_index": 7,
+    "scene_index": 8,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -10,20 +10,21 @@
       "Lockdown fails at the hospital as the infected nurse turns, forcing Marcus, Priya, Gaz, and Peggy to flee in an ambulance. As they speed away, an Aldersgate van races toward the abandoned facility.",
       "After their ambulance runs out of fuel at Begum Motors, the group survives an attack by Fatima's turned apprentice, whom Gaz traps inside the garage. During the chaos, Jamie suffers a scratch on her left forearm, leaving Priya horrified as Fatima reveals her brother Imran has vanished.",
       "Priya bound Jamie's scratch and ordered her kept under constant watch through the night while Fatima repaired the ambulance's fuel lines. Tensions boiled over as Marcus questioned Priya about Toby's military connections and Gaz clashed with Fatima over leaving before Peggy restored order.",
-      "As the battery radio confirms the military cordon around Sheffield, Jamie passes the eight-hour mark with no sign of fever. Their relief is cut short when a faint, synchronized humming begins to drift across the yard from the darkness outside."
+      "As the battery radio confirms the military cordon around Sheffield, Jamie passes the eight-hour mark with no sign of fever. Their relief is cut short when a faint, synchronized humming begins to drift across the yard from the darkness outside.",
+      "Escaping the surrounded garage through an underground drainage pit, the survivors emerge into the foggy dawn lane just as BBC Radio Sheffield goes dark. Armed with Rhea's final broadcast instructions, the group sets out on foot toward the Haven sanctuary at the old Ashop water works."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
         "carries": "ice axe",
-        "knows": "Sheffield is cordoned under Operation Hearth; a strange humming sound is approaching the yard."
+        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works."
       },
       "PRIYA": {
         "status": "alive",
         "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
-        "carries": "ambulance keys",
-        "knows": "Jamie was scratched on her left forearm; Marcus suspects military ties to Toby; lied to Marcus about Aldersgate's full involvement."
+        "carries": "ambulance keys, battery radio",
+        "knows": "Jamie was scratched on her left forearm; Marcus suspects military ties to Toby; lied to Marcus about Aldersgate's full involvement; Haven at Ashop water works is an army screening centre."
       },
       "ROURKE": {
         "status": "alive",
@@ -47,7 +48,7 @@
         "status": "alive",
         "visible": "grease-stained mechanics coveralls, wet hair, smudge of dark engine grease on hands",
         "carries": "rag",
-        "knows": "her sister Naomi is stranded in Sheffield; Imran is missing; a humming sound surrounds the garage."
+        "knows": "her sister Naomi is stranded in Sheffield; Imran is missing; Haven is at Ashop water works."
       },
       "LINNEA": {
         "status": "alive",
@@ -86,7 +87,7 @@
         "knows": ""
       },
       "RHEA": {
-        "status": "alive",
+        "status": "dead",
         "visible": "",
         "carries": "",
         "knows": ""
