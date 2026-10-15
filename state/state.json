@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-15T13:00:00+00:00",
+  "last_due": "2026-10-16T13:00:00+00:00",
   "film": {
-    "scene_index": 8,
+    "scene_index": 9,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -11,20 +11,21 @@
       "After their ambulance runs out of fuel at Begum Motors, the group survives an attack by Fatima's turned apprentice, whom Gaz traps inside the garage. During the chaos, Jamie suffers a scratch on her left forearm, leaving Priya horrified as Fatima reveals her brother Imran has vanished.",
       "Priya bound Jamie's scratch and ordered her kept under constant watch through the night while Fatima repaired the ambulance's fuel lines. Tensions boiled over as Marcus questioned Priya about Toby's military connections and Gaz clashed with Fatima over leaving before Peggy restored order.",
       "As the battery radio confirms the military cordon around Sheffield, Jamie passes the eight-hour mark with no sign of fever. Their relief is cut short when a faint, synchronized humming begins to drift across the yard from the darkness outside.",
-      "Escaping the surrounded garage through an underground drainage pit, the survivors emerge into the foggy dawn lane just as BBC Radio Sheffield goes dark. Armed with Rhea's final broadcast instructions, the group sets out on foot toward the Haven sanctuary at the old Ashop water works."
+      "Escaping the surrounded garage through an underground drainage pit, the survivors emerge into the foggy dawn lane just as BBC Radio Sheffield goes dark. Armed with Rhea's final broadcast instructions, the group sets out on foot toward the Haven sanctuary at the old Ashop water works.",
+      "The ambulance breaks down on the high moor road, forcing the survivors to continue on foot to an army checkpoint. Faced with rifles and a harsh loudspeaker order from Major Hargreaves, Marcus argues fiercely before being forced to halt."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
         "carries": "ice axe",
-        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works."
+        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military is turning people away at the cordon."
       },
       "PRIYA": {
         "status": "alive",
         "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
         "carries": "ambulance keys, battery radio",
-        "knows": "Jamie was scratched on her left forearm; Marcus suspects military ties to Toby; lied to Marcus about Aldersgate's full involvement; Haven at Ashop water works is an army screening centre."
+        "knows": "Jamie was scratched; army is enforcing strict quarantine at the cordon."
       },
       "ROURKE": {
         "status": "alive",
@@ -42,13 +43,13 @@
         "status": "alive",
         "visible": "high-visibility security vest, damp",
         "carries": "heavy Maglite torch",
-        "knows": "they must flee the valley immediately."
+        "knows": "they must flee the valley immediately; military has live weapons drawn."
       },
       "FATIMA": {
         "status": "alive",
         "visible": "grease-stained mechanics coveralls, wet hair, smudge of dark engine grease on hands",
         "carries": "rag",
-        "knows": "her sister Naomi is stranded in Sheffield; Imran is missing; Haven is at Ashop water works."
+        "knows": "her sister Naomi is stranded in Sheffield; ambulance is dead; army checkpoint blocks the road."
       },
       "LINNEA": {
         "status": "alive",
@@ -60,13 +61,13 @@
         "status": "alive",
         "visible": "torn jacket sleeve on left forearm, freshly re-bandaged scratch on left forearm",
         "carries": "compass, two-way radio",
-        "knows": "she was scratched by a fevered apprentice; eight hours have passed with no fever symptoms."
+        "knows": "she passed eight hours without fever; army has blocked the road."
       },
       "PEGGY": {
         "status": "alive",
         "visible": "fresh white plaster cast on left wrist",
         "carries": "handbag with flask",
-        "knows": "Marcus won't leave her behind."
+        "knows": "Marcus won't leave her behind; army is stopping all traffic."
       },
       "OLLIE": {
         "status": "alive",
