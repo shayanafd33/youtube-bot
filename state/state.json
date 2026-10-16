@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-16T13:00:00+00:00",
+  "last_due": "2026-10-17T13:00:00+00:00",
   "film": {
-    "scene_index": 9,
+    "scene_index": 10,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -12,20 +12,21 @@
       "Priya bound Jamie's scratch and ordered her kept under constant watch through the night while Fatima repaired the ambulance's fuel lines. Tensions boiled over as Marcus questioned Priya about Toby's military connections and Gaz clashed with Fatima over leaving before Peggy restored order.",
       "As the battery radio confirms the military cordon around Sheffield, Jamie passes the eight-hour mark with no sign of fever. Their relief is cut short when a faint, synchronized humming begins to drift across the yard from the darkness outside.",
       "Escaping the surrounded garage through an underground drainage pit, the survivors emerge into the foggy dawn lane just as BBC Radio Sheffield goes dark. Armed with Rhea's final broadcast instructions, the group sets out on foot toward the Haven sanctuary at the old Ashop water works.",
-      "The ambulance breaks down on the high moor road, forcing the survivors to continue on foot to an army checkpoint. Faced with rifles and a harsh loudspeaker order from Major Hargreaves, Marcus argues fiercely before being forced to halt."
+      "The ambulance breaks down on the high moor road, forcing the survivors to continue on foot to an army checkpoint. Faced with rifles and a harsh loudspeaker order from Major Hargreaves, Marcus argues fiercely before being forced to halt.",
+      "Major Hargreaves warns Marcus that the army has orders to burn the valley clean if containment fails within the week. She directs them toward Haven, adding that the camp is operated by Aldersgate under government contract."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
-        "carries": "ice axe",
-        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military is turning people away at the cordon."
+        "carries": "ice axe, ordnance survey map",
+        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military will firebomb the valley if containment fails; Haven is run by Aldersgate."
       },
       "PRIYA": {
         "status": "alive",
         "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
         "carries": "ambulance keys, battery radio",
-        "knows": "Jamie was scratched; army is enforcing strict quarantine at the cordon."
+        "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate."
       },
       "ROURKE": {
         "status": "alive",
@@ -83,9 +84,9 @@
       },
       "HARGREAVES": {
         "status": "alive",
-        "visible": "",
-        "carries": "",
-        "knows": ""
+        "visible": "military uniform, field cap",
+        "carries": "none",
+        "knows": "valleys are marked for a clean burn if containment fails."
       },
       "RHEA": {
         "status": "dead",
