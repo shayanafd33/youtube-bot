@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-18T13:00:00+00:00",
+  "last_due": "2026-10-19T13:00:00+00:00",
   "film": {
-    "scene_index": 11,
+    "scene_index": 12,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -14,14 +14,15 @@
       "Escaping the surrounded garage through an underground drainage pit, the survivors emerge into the foggy dawn lane just as BBC Radio Sheffield goes dark. Armed with Rhea's final broadcast instructions, the group sets out on foot toward the Haven sanctuary at the old Ashop water works.",
       "The ambulance breaks down on the high moor road, forcing the survivors to continue on foot to an army checkpoint. Faced with rifles and a harsh loudspeaker order from Major Hargreaves, Marcus argues fiercely before being forced to halt.",
       "Major Hargreaves warns Marcus that the army has orders to burn the valley clean if containment fails within the week. She directs them toward Haven, adding that the camp is operated by Aldersgate under government contract.",
-      "Resting in an abandoned farmhouse, the survivors share lingering trauma and secrets while bonding over shared grief. Their quiet moment is cut short when they pick up a nearby high-frequency radio signal filtering through the dusk light."
+      "Resting in an abandoned farmhouse, the survivors share lingering trauma and secrets while bonding over shared grief. Their quiet moment is cut short when they pick up a nearby high-frequency radio signal filtering through the dusk light.",
+      "Following a crackling ham radio signal into an attic, the survivors recruit Ollie, a panicked radio enthusiast who has been recording coded transmissions. They learn that a local scientist named Linnea is broadcasting from near the mill, prompting Marcus to move the group toward her location."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
         "carries": "ice axe, ordnance survey map",
-        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military will firebomb the valley if containment fails; Haven is run by Aldersgate; heard radio static down the lane."
+        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military will firebomb the valley if containment fails; Haven is run by Aldersgate; heard radio static down the lane; a scientist named Linnea is broadcasting coded messages near the mill."
       },
       "PRIYA": {
         "status": "alive",
@@ -51,7 +52,7 @@
         "status": "alive",
         "visible": "grease-stained mechanics coveralls, wet hair, smudge of dark engine grease on hands",
         "carries": "rag",
-        "knows": "her sister Naomi is stranded in Sheffield; ambulance is dead; army checkpoint blocks the road; abandoned her brother Imran."
+        "knows": "her sister Naomi is stranded in Sheffield; ambulance is dead; army checkpoint blocks the road; abandoned her brother Imran; a scientist named Linnea is broadcasting near the mill."
       },
       "LINNEA": {
         "status": "alive",
@@ -63,7 +64,7 @@
         "status": "alive",
         "visible": "torn jacket sleeve on left forearm, freshly re-bandaged scratch on left forearm",
         "carries": "compass, two-way radio",
-        "knows": "she passed eight hours without fever; army has blocked the road; detected nearby high-frequency broadcast."
+        "knows": "she passed eight hours without fever; army has blocked the road; detected nearby high-frequency broadcast originating near the mill."
       },
       "PEGGY": {
         "status": "alive",
@@ -73,9 +74,9 @@
       },
       "OLLIE": {
         "status": "alive",
-        "visible": "",
-        "carries": "ham radio, headset",
-        "knows": ""
+        "visible": "orange running shoes, headset draped on neck",
+        "carries": "ham radio rig, annotated notebook",
+        "knows": "monitoring coded transmissions from a scientist named Linnea near the mill who speaks of an archive"
       },
       "NAOMI": {
         "status": "alive",
