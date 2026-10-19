@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-19T13:00:00+00:00",
+  "last_due": "2026-10-20T13:00:00+00:00",
   "film": {
-    "scene_index": 12,
+    "scene_index": 13,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -15,20 +15,21 @@
       "The ambulance breaks down on the high moor road, forcing the survivors to continue on foot to an army checkpoint. Faced with rifles and a harsh loudspeaker order from Major Hargreaves, Marcus argues fiercely before being forced to halt.",
       "Major Hargreaves warns Marcus that the army has orders to burn the valley clean if containment fails within the week. She directs them toward Haven, adding that the camp is operated by Aldersgate under government contract.",
       "Resting in an abandoned farmhouse, the survivors share lingering trauma and secrets while bonding over shared grief. Their quiet moment is cut short when they pick up a nearby high-frequency radio signal filtering through the dusk light.",
-      "Following a crackling ham radio signal into an attic, the survivors recruit Ollie, a panicked radio enthusiast who has been recording coded transmissions. They learn that a local scientist named Linnea is broadcasting from near the mill, prompting Marcus to move the group toward her location."
+      "Following a crackling ham radio signal into an attic, the survivors recruit Ollie, a panicked radio enthusiast who has been recording coded transmissions. They learn that a local scientist named Linnea is broadcasting from near the mill, prompting Marcus to move the group toward her location.",
+      "Dr Linnea Frost reveals the pathogen's official name, Lethe-7, and claims a cure exists in the subterranean archives of Aldersgate Hall. Despite her unsettling composure and refusal to look out for infected, Marcus leads the reluctant group behind her toward the hall."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
         "carries": "ice axe, ordnance survey map",
-        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military will firebomb the valley if containment fails; Haven is run by Aldersgate; heard radio static down the lane; a scientist named Linnea is broadcasting coded messages near the mill."
+        "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military will firebomb the valley if containment fails; Haven is run by Aldersgate; heard radio static down the lane; Linnea was broadcasting near the mill; pathogen name is Lethe-7; cure notes are in subterranean archives"
       },
       "PRIYA": {
         "status": "alive",
         "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
         "carries": "ambulance keys, battery radio",
-        "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate; hid prior knowledge of Aldersgate trials."
+        "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate; hid prior knowledge of Aldersgate trials; pathogen is named Lethe-7; cure archives exist at Aldersgate Hall; Linnea shows no fear of infected."
       },
       "ROURKE": {
         "status": "alive",
@@ -56,9 +57,9 @@
       },
       "LINNEA": {
         "status": "alive",
-        "visible": "",
+        "visible": "pristine dark winter coat, spotless condition",
         "carries": "orange sample case, hidden satellite phone",
-        "knows": "she informs for Rourke (secret)"
+        "knows": "she informs for Rourke (secret); Lethe-7 cure notes are at Aldersgate Hall subterranean archives."
       },
       "JAMIE": {
         "status": "alive",
@@ -76,7 +77,7 @@
         "status": "alive",
         "visible": "orange running shoes, headset draped on neck",
         "carries": "ham radio rig, annotated notebook",
-        "knows": "monitoring coded transmissions from a scientist named Linnea near the mill who speaks of an archive"
+        "knows": "monitoring coded transmissions from Linnea; pathogen is called Lethe-7; cure archives are at Aldersgate Hall; distrusts Linnea's total lack of fear."
       },
       "NAOMI": {
         "status": "alive",
