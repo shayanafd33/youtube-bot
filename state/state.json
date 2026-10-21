@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-21T13:00:00+00:00",
+  "last_due": "2026-10-22T13:00:00+00:00",
   "film": {
-    "scene_index": 14,
+    "scene_index": 15,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -17,7 +17,8 @@
       "Resting in an abandoned farmhouse, the survivors share lingering trauma and secrets while bonding over shared grief. Their quiet moment is cut short when they pick up a nearby high-frequency radio signal filtering through the dusk light.",
       "Following a crackling ham radio signal into an attic, the survivors recruit Ollie, a panicked radio enthusiast who has been recording coded transmissions. They learn that a local scientist named Linnea is broadcasting from near the mill, prompting Marcus to move the group toward her location.",
       "Dr Linnea Frost reveals the pathogen's official name, Lethe-7, and claims a cure exists in the subterranean archives of Aldersgate Hall. Despite her unsettling composure and refusal to look out for infected, Marcus leads the reluctant group behind her toward the hall.",
-      "A massive, overheating brute ambushes the group in an old stone barn, cracking Gaz's ribs. Marcus realises the creature's vulnerability to extreme heat and drives it into a freezing cattle trough, discovering cold is its weakness."
+      "A massive, overheating brute ambushes the group in an old stone barn, cracking Gaz's ribs. Marcus realises the creature's vulnerability to extreme heat and drives it into a freezing cattle trough, discovering cold is its weakness.",
+      "Marcus shares his regret over leaving Toby behind with Priya, who deflects questions about her past with a practiced lie. In the darkness, Linnea checks her hidden satellite phone before slipping it away."
     ],
     "chars": {
       "MARCUS": {
