@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-23T13:00:00+00:00",
+  "last_due": "2026-10-24T13:00:00+00:00",
   "film": {
-    "scene_index": 16,
+    "scene_index": 17,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -19,13 +19,14 @@
       "Dr Linnea Frost reveals the pathogen's official name, Lethe-7, and claims a cure exists in the subterranean archives of Aldersgate Hall. Despite her unsettling composure and refusal to look out for infected, Marcus leads the reluctant group behind her toward the hall.",
       "A massive, overheating brute ambushes the group in an old stone barn, cracking Gaz's ribs. Marcus realises the creature's vulnerability to extreme heat and drives it into a freezing cattle trough, discovering cold is its weakness.",
       "Marcus shares his regret over leaving Toby behind with Priya, who deflects questions about her past with a practiced lie. In the darkness, Linnea checks her hidden satellite phone before slipping it away.",
-      "With Hollows occupying the valley floor, Peggy convinces the group to enter a disused ventilation shaft leading to a subterranean aqueduct beneath the ridge. Overcoming Gaz's claustrophobic hesitation, Marcus leads the group down into the damp, pitch-black conduit."
+      "With Hollows occupying the valley floor, Peggy convinces the group to enter a disused ventilation shaft leading to a subterranean aqueduct beneath the ridge. Overcoming Gaz's claustrophobic hesitation, Marcus leads the group down into the damp, pitch-black conduit.",
+      "Trapped in the dark water tunnel, the group uses radio static to divert hunting Fevered away from their position. A sudden structural collapse forces Marcus to abandon his ice axe in the rubble as he drags Jamie to safety."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
         "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
-        "carries": "ice axe, ordnance survey map",
+        "carries": "ordnance survey map",
         "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military will firebomb the valley if containment fails; Haven is run by Aldersgate; heard radio static down the lane; Linnea was broadcasting near the mill; pathogen name is Lethe-7; cure notes are in subterranean archives"
       },
       "PRIYA": {
