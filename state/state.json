@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-24T13:00:00+00:00",
+  "last_due": "2026-10-25T13:00:00+00:00",
   "film": {
-    "scene_index": 17,
+    "scene_index": 18,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -20,7 +20,8 @@
       "A massive, overheating brute ambushes the group in an old stone barn, cracking Gaz's ribs. Marcus realises the creature's vulnerability to extreme heat and drives it into a freezing cattle trough, discovering cold is its weakness.",
       "Marcus shares his regret over leaving Toby behind with Priya, who deflects questions about her past with a practiced lie. In the darkness, Linnea checks her hidden satellite phone before slipping it away.",
       "With Hollows occupying the valley floor, Peggy convinces the group to enter a disused ventilation shaft leading to a subterranean aqueduct beneath the ridge. Overcoming Gaz's claustrophobic hesitation, Marcus leads the group down into the damp, pitch-black conduit.",
-      "Trapped in the dark water tunnel, the group uses radio static to divert hunting Fevered away from their position. A sudden structural collapse forces Marcus to abandon his ice axe in the rubble as he drags Jamie to safety."
+      "Trapped in the dark water tunnel, the group uses radio static to divert hunting Fevered away from their position. A sudden structural collapse forces Marcus to abandon his ice axe in the rubble as he drags Jamie to safety.",
+      "The group successfully arrives at Haven gate, where Dr Edmund Rourke greets them warmly under the floodlights. However, relief immediately turns to dread when Rourke recognizes Dr Priya Nair, exposing her past lies to Marcus."
     ],
     "chars": {
       "MARCUS": {
@@ -33,13 +34,13 @@
         "status": "alive",
         "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
         "carries": "ambulance keys, battery radio",
-        "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate; hid prior knowledge of Aldersgate trials; pathogen is named Lethe-7; cure archives exist at Aldersgate Hall; Linnea shows no fear of infected."
+        "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate; hid prior knowledge of Aldersgate trials; pathogen is named Lethe-7; cure archives exist at Aldersgate Hall; Linnea shows no fear of infected; Dr Edmund Rourke recognized her publicly at Haven gate."
       },
       "ROURKE": {
         "status": "alive",
-        "visible": "",
+        "visible": "pristine winter coat, immaculate silver hair",
         "carries": "silver fountain pen",
-        "knows": "everything about Lethe-7"
+        "knows": "everything about Lethe-7; knows Priya Nair worked at Haven previously."
       },
       "TOBY": {
         "status": "alive (infected Alpha)",
