@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-26T13:00:00+00:00",
+  "last_due": "2026-10-27T13:00:00+00:00",
   "film": {
-    "scene_index": 19,
+    "scene_index": 20,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -22,7 +22,8 @@
       "With Hollows occupying the valley floor, Peggy convinces the group to enter a disused ventilation shaft leading to a subterranean aqueduct beneath the ridge. Overcoming Gaz's claustrophobic hesitation, Marcus leads the group down into the damp, pitch-black conduit.",
       "Trapped in the dark water tunnel, the group uses radio static to divert hunting Fevered away from their position. A sudden structural collapse forces Marcus to abandon his ice axe in the rubble as he drags Jamie to safety.",
       "The group successfully arrives at Haven gate, where Dr Edmund Rourke greets them warmly under the floodlights. However, relief immediately turns to dread when Rourke recognizes Dr Priya Nair, exposing her past lies to Marcus.",
-      "Marcus and his group receive numbered wristbands and undergo blood processing at the intake tent. Marcus reunites emotionally with his sister Naomi, who works under Dr Rourke in the infirmary."
+      "Marcus and his group receive numbered wristbands and undergo blood processing at the intake tent. Marcus reunites emotionally with his sister Naomi, who works under Dr Rourke in the infirmary.",
+      "Marcus and the survivors realize Haven is a facade after observing locked comms tents and refrigerated trucks secretly hauling bodies from the guarded East Wing. Suspicious of Priya's evasive explanations regarding Dr Rourke, Marcus decides they must escape the sanctuary."
     ],
     "chars": {
       "MARCUS": {
@@ -35,7 +36,7 @@
         "status": "alive",
         "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
         "carries": "ambulance keys, battery radio",
-        "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate; hid prior knowledge of Aldersgate trials; pathogen is named Lethe-7; cure archives exist at Aldersgate Hall; Linnea shows no fear of infected; Dr Edmund Rourke recognized her publicly at Haven gate."
+        "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate; hid prior knowledge of Aldersgate trials; pathogen is named Lethe-7; cure archives exist at Aldersgate Hall; Linnea shows no fear of infected; Dr Edmund Rourke recognized her publicly at Haven gate; group suspec"
       },
       "ROURKE": {
         "status": "alive",
@@ -53,13 +54,13 @@
         "status": "alive",
         "visible": "high-visibility security vest, damp, favoring right side",
         "carries": "heavy Maglite torch",
-        "knows": "they must flee the valley immediately; military has live weapons drawn; admitted he froze during police career; cold drops the steaming infected; old aqueduct conduit runs beneath the ridge."
+        "knows": "they must flee the valley immediately; military has live weapons drawn; admitted he froze during police career; cold drops the steaming infected; old aqueduct conduit runs beneath the ridge; east wing is heavily guarded; signal tent is locked under armed guard."
       },
       "FATIMA": {
         "status": "alive",
         "visible": "grease-stained mechanics coveralls, wet hair, smudge of dark engine grease on hands",
         "carries": "rag",
-        "knows": "her sister Naomi is stranded in Sheffield; ambulance is dead; army checkpoint blocks the road; abandoned her brother Imran; a scientist named Linnea is broadcasting near the mill; cold drops brutes."
+        "knows": "her sister Naomi is stranded in Sheffield; ambulance is dead; army checkpoint blocks the road; abandoned her brother Imran; a scientist named Linnea is broadcasting near the mill; cold drops brutes; refrigerated trucks enter camp empty and leave full with bodies."
       },
       "LINNEA": {
         "status": "alive",
