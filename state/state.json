@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-27T13:00:00+00:00",
+  "last_due": "2026-10-28T13:00:00+00:00",
   "film": {
-    "scene_index": 20,
+    "scene_index": 21,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -23,7 +23,8 @@
       "Trapped in the dark water tunnel, the group uses radio static to divert hunting Fevered away from their position. A sudden structural collapse forces Marcus to abandon his ice axe in the rubble as he drags Jamie to safety.",
       "The group successfully arrives at Haven gate, where Dr Edmund Rourke greets them warmly under the floodlights. However, relief immediately turns to dread when Rourke recognizes Dr Priya Nair, exposing her past lies to Marcus.",
       "Marcus and his group receive numbered wristbands and undergo blood processing at the intake tent. Marcus reunites emotionally with his sister Naomi, who works under Dr Rourke in the infirmary.",
-      "Marcus and the survivors realize Haven is a facade after observing locked comms tents and refrigerated trucks secretly hauling bodies from the guarded East Wing. Suspicious of Priya's evasive explanations regarding Dr Rourke, Marcus decides they must escape the sanctuary."
+      "Marcus and the survivors realize Haven is a facade after observing locked comms tents and refrigerated trucks secretly hauling bodies from the guarded East Wing. Suspicious of Priya's evasive explanations regarding Dr Rourke, Marcus decides they must escape the sanctuary.",
+      "Priya sneaks into the Haven lab annexe and discovers her own signature on the Lethe-7 safety file that concealed early clinical seizures. Linnea catches her in the act and warns her that Rourke's belief in his own righteousness makes him truly dangerous."
     ],
     "chars": {
       "MARCUS": {
@@ -34,7 +35,7 @@
       },
       "PRIYA": {
         "status": "alive",
-        "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face",
+        "visible": "hospital scrubs under a beige waxed jacket, rain-streaked face, visibly pale and trembling",
         "carries": "ambulance keys, battery radio",
         "knows": "Jamie was scratched; army is enforcing strict quarantine; Haven is linked to Aldersgate; hid prior knowledge of Aldersgate trials; pathogen is named Lethe-7; cure archives exist at Aldersgate Hall; Linnea shows no fear of infected; Dr Edmund Rourke recognized her publicly at Haven gate; group suspec"
       },
@@ -66,7 +67,7 @@
         "status": "alive",
         "visible": "pristine dark winter coat, spotless condition",
         "carries": "orange sample case, hidden satellite phone",
-        "knows": "she informs for Rourke (secret); Lethe-7 cure notes are at Aldersgate Hall subterranean archives."
+        "knows": "she informs for Rourke (secret); Lethe-7 cure notes are at Aldersgate Hall subterranean archives; knows Priya signed the Lethe-7 safety release omitting seizures."
       },
       "JAMIE": {
         "status": "alive",
