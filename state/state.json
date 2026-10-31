@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-10-30T13:00:00+00:00",
+  "last_due": "2026-10-31T13:00:00+00:00",
   "film": {
-    "scene_index": 23,
+    "scene_index": 24,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -26,7 +26,8 @@
       "Marcus and the survivors realize Haven is a facade after observing locked comms tents and refrigerated trucks secretly hauling bodies from the guarded East Wing. Suspicious of Priya's evasive explanations regarding Dr Rourke, Marcus decides they must escape the sanctuary.",
       "Priya sneaks into the Haven lab annexe and discovers her own signature on the Lethe-7 safety file that concealed early clinical seizures. Linnea catches her in the act and warns her that Rourke's belief in his own righteousness makes him truly dangerous.",
       "Priya discovers Jamie possesses natural immunity to Lethe-7 and falsifies her intake blood test to protect her from Dr Rourke. Linnea silently witnesses the cover-up, leaving Priya unsure whether she will be reported.",
-      "Marcus and Gaz break into the Quiet Wing and discover Toby restrained in a glass cell alongside rows of sedated test subjects. Dr Rourke interrupts them, declaring Toby his first success in erasing traumatic memory."
+      "Marcus and Gaz break into the Quiet Wing and discover Toby restrained in a glass cell alongside rows of sedated test subjects. Dr Rourke interrupts them, declaring Toby his first success in erasing traumatic memory.",
+      "Dr Rourke defends Lethe as a merciful erasure of trauma and offers Marcus the same oblivion, which Marcus refuses. Rourke then hands Marcus the signed Lethe-7 safety report, exposing Priya's past complicity."
     ],
     "chars": {
       "MARCUS": {
