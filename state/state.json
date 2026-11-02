@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-11-01T13:00:00+00:00",
+  "last_due": "2026-11-02T13:00:00+00:00",
   "film": {
-    "scene_index": 25,
+    "scene_index": 26,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -28,7 +28,8 @@
       "Priya discovers Jamie possesses natural immunity to Lethe-7 and falsifies her intake blood test to protect her from Dr Rourke. Linnea silently witnesses the cover-up, leaving Priya unsure whether she will be reported.",
       "Marcus and Gaz break into the Quiet Wing and discover Toby restrained in a glass cell alongside rows of sedated test subjects. Dr Rourke interrupts them, declaring Toby his first success in erasing traumatic memory.",
       "Dr Rourke defends Lethe as a merciful erasure of trauma and offers Marcus the same oblivion, which Marcus refuses. Rourke then hands Marcus the signed Lethe-7 safety report, exposing Priya's past complicity.",
-      "Marcus reveals Priya's signed safety report to the group in the Haven courtyard, shattering their trust and causing a violent rift between Fatima and Priya. With Priya's cracked glasses slipping into the mud, the survivors stand deeply divided just as Haven's authorities move in."
+      "Marcus reveals Priya's signed safety report to the group in the Haven courtyard, shattering their trust and causing a violent rift between Fatima and Priya. With Priya's cracked glasses slipping into the mud, the survivors stand deeply divided just as Haven's authorities move in.",
+      "Linnea admits to reporting Jamie's immunity to Dr Rourke, prompting a furious slap from Priya while Fatima confiscates Linnea's satellite phone. As they prepare to run from incoming guards, Ollie discovers an army transmission showing Operation Hearth's 36-hour firebomb countdown."
     ],
     "chars": {
       "MARCUS": {
@@ -39,9 +40,9 @@
       },
       "PRIYA": {
         "status": "alive",
-        "visible": "hospital scrubs under a beige waxed jacket, wet rain-soaked clothes, cracked left lens on glasses",
+        "visible": "hospital scrubs under beige waxed jacket, wet rain-soaked clothes, cracked left lens on glasses",
         "carries": "ambulance keys, battery radio, swapped blood sample vial",
-        "knows": "Jamie possesses natural immunity antibodies to Lethe-7; Linnea caught her faking Jamie's screening results; group now knows she signed incomplete safety data"
+        "knows": "Operation Hearth gives them 36 hours before total destruction of Hope Valley"
       },
       "ROURKE": {
         "status": "alive",
@@ -64,20 +65,20 @@
       "FATIMA": {
         "status": "alive",
         "visible": "grease-stained mechanics coveralls, wet hair, smudge of dark engine grease on hands",
-        "carries": "rag",
-        "knows": "her sister Naomi is stranded in Sheffield; ambulance is dead; army checkpoint blocks the road; abandoned her brother Imran; a scientist named Linnea is broadcasting near the mill; cold drops brutes; refrigerated trucks enter camp empty and leave full with bodies; Priya signed incomplete Lethe-7 safe"
+        "carries": "rag, Linnea's satellite phone",
+        "knows": "Operation Hearth countdown is 36 hours; Linnea was tipping off Rourke"
       },
       "LINNEA": {
         "status": "alive",
-        "visible": "pristine dark winter coat",
-        "carries": "orange sample case, hidden satellite phone",
-        "knows": "Jamie is naturally immune to Lethe-7; Priya swapped blood sample labels to deceive Dr Rourke"
+        "visible": "pristine dark winter coat, red welt forming on left cheek",
+        "carries": "orange sample case",
+        "knows": "Jamie is naturally immune; group has stolen her satellite phone"
       },
       "JAMIE": {
         "status": "alive",
         "visible": "torn jacket sleeve pulled down over freshly re-bandaged left forearm",
         "carries": "compass, two-way radio",
-        "knows": "she is naturally immune to Lethe-7; Rourke will lock her up if he finds out; Priya faked her screening test"
+        "knows": "Linnea betrayed her location to Dr Rourke; Operation Hearth burn is 36 hours away"
       },
       "PEGGY": {
         "status": "alive",
@@ -89,7 +90,7 @@
         "status": "alive",
         "visible": "orange running shoes, headset draped on neck",
         "carries": "ham radio rig, annotated notebook",
-        "knows": "monitoring coded transmissions from Linnea; pathogen is called Lethe-7; cure archives are at Aldersgate Hall; distrusts Linnea's total lack of fear."
+        "knows": "Operation Hearth countdown is 36 hours until firebombing"
       },
       "NAOMI": {
         "status": "alive",
