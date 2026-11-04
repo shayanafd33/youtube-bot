@@ -1,8 +1,8 @@
 {
   "used_topics": [],
-  "last_due": "2026-11-03T13:00:00+00:00",
+  "last_due": "2026-11-04T13:00:00+00:00",
   "film": {
-    "scene_index": 27,
+    "scene_index": 28,
     "summaries": [
       "Marcus finds his long-lost military friend Toby Wren shivering and amnesiac on the freezing moors. Sensing severe danger, he carries him down the mountain to seek urgent medical attention.",
       "Dr. Nair confirms Toby is suffering from a dangerous high fever and unresponsive pupils, while two tense Aldersgate representatives arrive demanding his release. Marcus flatly refuses to let them take him, but Toby's condition begins to rapidly deteriorate.",
@@ -30,13 +30,14 @@
       "Dr Rourke defends Lethe as a merciful erasure of trauma and offers Marcus the same oblivion, which Marcus refuses. Rourke then hands Marcus the signed Lethe-7 safety report, exposing Priya's past complicity.",
       "Marcus reveals Priya's signed safety report to the group in the Haven courtyard, shattering their trust and causing a violent rift between Fatima and Priya. With Priya's cracked glasses slipping into the mud, the survivors stand deeply divided just as Haven's authorities move in.",
       "Linnea admits to reporting Jamie's immunity to Dr Rourke, prompting a furious slap from Priya while Fatima confiscates Linnea's satellite phone. As they prepare to run from incoming guards, Ollie discovers an army transmission showing Operation Hearth's 36-hour firebomb countdown.",
-      "Gaz pulls Haven's main power breaker to plunge the compound into darkness and allow Jamie and Marcus to escape. However, the blackout cuts power to the Quiet Wing's magnetic locks, unleashing the contained infected directly into the dormitory access halls."
+      "Gaz pulls Haven's main power breaker to plunge the compound into darkness and allow Jamie and Marcus to escape. However, the blackout cuts power to the Quiet Wing's magnetic locks, unleashing the contained infected directly into the dormitory access halls.",
+      "Gaz holds the east wing fire door against the advancing horde, forcing Marcus to take his heavy torch and flee with Jamie. The steel door slams shut in the dark, leaving Marcus to escape alone with Gaz's sacrifice weighing on him."
     ],
     "chars": {
       "MARCUS": {
         "status": "alive",
-        "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained",
-        "carries": "ordnance survey map, signed Lethe-7 safety report",
+        "visible": "wet mountain rescue gear, red outer jacket on, sweat-stained, dirt on cheek",
+        "carries": "ordnance survey map, signed Lethe-7 safety report, Gaz's heavy Maglite torch",
         "knows": "Sheffield studio fell on air; Haven reception centre is at Ashop water works; military will firebomb the valley if containment fails; Haven is run by Aldersgate; heard radio static down the lane; Linnea was broadcasting near the mill; pathogen name is Lethe-7; cure notes are in subterranean archives"
       },
       "PRIYA": {
@@ -58,9 +59,9 @@
         "knows": "nothing, completely consumed by the fever and instinct to attack; retained momentary auditory trace of Marcus's name."
       },
       "GAZ": {
-        "status": "alive",
-        "visible": "high-visibility security vest, damp, favoring right side, dirt on cheek",
-        "carries": "heavy Maglite torch, lockpicks",
+        "status": "dead",
+        "visible": "high-visibility security vest, damp, dirt on cheek",
+        "carries": "none",
         "knows": "they must flee the valley immediately; military has live weapons drawn; admitted he froze during police career; cold drops the steaming infected; old aqueduct conduit runs beneath the ridge; east wing is heavily guarded; signal tent is locked under armed guard; Haven Quiet Wing holds living human ex"
       },
       "FATIMA": {
